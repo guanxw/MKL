@@ -1,0 +1,87 @@
+//
+//  MainViewController.m
+//  MakerOnly
+//
+//  Created by Jared on 16/7/15.
+//  Copyright © 2016年 Jared. All rights reserved.
+//
+
+#import "MainViewController.h"
+
+#import "HomeViewController.h"
+#import "MessangerViewController.h"
+#import "MyCenterViewController.h"
+#import "SourceViewController.h"
+
+
+@interface MainViewController ()
+
+@end
+
+@implementation MainViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.view.backgroundColor = [UIColor purpleColor];
+    [self initNavController];
+}
+
+- (UITabBarItem *)itemWithTitle:(NSString *)title
+                          image:(UIImage *)image
+                  selectedImage:(UIImage *)selectedImage{
+    UITabBarItem *tabBarItem ;
+    if (SYSTEM_VERSION_IOS >= 7.0) {
+        image = [image imageWithRenderingMode:(UIImageRenderingModeAlwaysOriginal)];
+        selectedImage = [selectedImage imageWithRenderingMode:(UIImageRenderingModeAlwaysOriginal)];
+        tabBarItem = [[UITabBarItem alloc] initWithTitle:title image:image selectedImage:selectedImage];
+    }else{
+        tabBarItem = [[UITabBarItem alloc] init];
+        [tabBarItem setFinishedSelectedImage:selectedImage withFinishedUnselectedImage:image];
+    }
+//    [tabBarItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor darkGrayColor],NSForegroundColorAttributeName, nil] forState:(UIControlStateNormal)];
+    return tabBarItem;
+}
+
+- (void)initNavController{
+    
+    
+//    [[UITabBarItem appearance] setTitleTextAttributes:<#(nullable NSDictionary<NSString *,id> *)#> forState:<#(UIControlState)#>]
+    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor redColor],NSForegroundColorAttributeName, nil] forState:UIControlStateSelected];
+    
+    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor darkGrayColor],NSForegroundColorAttributeName, nil] forState:UIControlStateHighlighted];
+    
+    HomeViewController *hVC = [[HomeViewController alloc] initWithNibName:@"HomeViewController" bundle:nil];
+    self.homeNav = [[UINavigationController alloc] initWithRootViewController:hVC];
+    self.homeNav.tabBarItem = [self itemWithTitle:@"Home" image:[UIImage imageNamed:@"tabbar_home"] selectedImage:[UIImage imageNamed:@"tabbar_home_highlighted"]];
+    
+    MessangerViewController *mVC = [[MessangerViewController alloc] initWithNibName:@"MessangerViewController" bundle:nil];
+    self.messangerNav = [[UINavigationController alloc] initWithRootViewController:mVC];
+    self.messangerNav.tabBarItem = [self itemWithTitle:@"Messanger" image:[UIImage imageNamed:@"tabbar_message_center"] selectedImage:[UIImage imageNamed:@"tabbar_message_center_highlighted"]];
+    
+    MyCenterViewController *mcVC = [[MyCenterViewController alloc] initWithNibName:@"MyCenterViewController" bundle:nil];
+    self.myCenterNav = [[UINavigationController alloc] initWithRootViewController:mcVC];
+    self.myCenterNav.tabBarItem = [self itemWithTitle:@"Center" image:[UIImage imageNamed:@"tabbar_profile"] selectedImage:[UIImage imageNamed:@"tabbar_profile_highlighted"]];
+    
+    SourceViewController *sVC = [[SourceViewController alloc] initWithNibName:@"SourceViewController" bundle:nil];
+    self.sourceNav = [[UINavigationController alloc] initWithRootViewController:sVC];
+    self.sourceNav.tabBarItem = [self itemWithTitle:@"Source" image:[UIImage imageNamed:@"tabbar_discover"] selectedImage:[UIImage imageNamed:@"tabbar_discover_highlighted"]];
+    
+    self.viewControllers = [NSArray arrayWithObjects:self.homeNav,self.sourceNav,self.messangerNav,self.myCenterNav, nil];
+    
+}
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+@end
