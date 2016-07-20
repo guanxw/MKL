@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "MainViewController.h"
+#import "GuideViewController.h"
+#import "LoginViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -19,8 +21,17 @@
     self.window = [[UIWindow alloc] initWithFrame:SCREEN];
     [self.window makeKeyAndVisible];
     
-    MainViewController *mVC = [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
-    self.window.rootViewController = mVC;
+    
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"firstLaunch"]) {
+        [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"firstLaunch"];
+        GuideViewController *gVC = [[GuideViewController alloc] initWithNibName:@"GuideViewController" bundle:nil];
+        self.window.rootViewController = gVC;
+    }else{
+//        MainViewController *mVC = [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
+        LoginViewController *logVC = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
+        self.window.rootViewController = logVC;
+    }
+    
     
     // Override point for customization after application launch.
     return YES;

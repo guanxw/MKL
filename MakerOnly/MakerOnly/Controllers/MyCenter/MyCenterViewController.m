@@ -8,6 +8,7 @@
 
 #import "MyCenterViewController.h"
 #import "CenterHeaderView.h"
+#import "MyProfileViewController.h"
 
 @interface MyCenterViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
@@ -29,15 +30,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Center";
-    
     [self initTableView];
     self.dataArray = @[@[@"Manage Order",@"Buying Request",@"Inquiries"],@[@"Survey",@"My Coupon"],@[@"Help Center"]];
-    
-    
 }
 
 - (void)initTableView{
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREENH_HEIGHT) style:(UITableViewStylePlain)];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, -20, SCREEN_WIDTH, SCREENH_HEIGHT) style:(UITableViewStylePlain)];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
@@ -56,8 +54,10 @@
 }
 
 - (void)iconAction{
-    JDLog(@"修改头像");
+    MyProfileViewController *mpVC = [[MyProfileViewController alloc] initWithNibName:@"MyProfileViewController" bundle:nil];
     
+    mpVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:mpVC animated:YES];
     
 }
 

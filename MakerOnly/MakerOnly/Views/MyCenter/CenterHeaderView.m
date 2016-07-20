@@ -17,7 +17,6 @@
     self.iconImage.layer.masksToBounds = YES;
     
     self.nameLabel.text = @"Jared";
-    self.backgroundColor = [UIColor purpleColor];
 }
 
 
