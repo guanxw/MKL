@@ -179,3 +179,40 @@ item.alpha = 0.0; \
 
 //GCD - 开启异步线程
 #define kDISPATCH_GLOBAL_QUEUE_DEFAULT(globalQueueBlock) dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), globalQueueBlocl);
+
+//MySelf
+#define nilOrJSONObjectForKey(JSON_, KEY_) [[JSON_ objectForKey:KEY_] isKindOfClass:[NSNull class]] ? nil : [JSON_ objectForKey:KEY_]
+
+#import "InterfaceUrlDefine.h"
+
+/*
+
+#define kAccessKeyInKeychain @""
+
+#define kRealNameInKeychain @""
+
+#define kSecretKeyInKeychain @""
+
+#define kLoginName @""
+
+#define kLoginPsw @""
+
+#define kDeviceUUIDInKeychain @""
+
+#define kKeychainServiceName @""
+
+*/
+
+#define kAccessKeyInKeychain @"MakerOnly_login_access_key"
+#define kSecretKeyInKeychain @"MakerOnly_login_secret_key"
+#define kRealNameInKeychain  @"MakerOnly_login_realName_key"
+
+#define kDeviceUUIDInKeychain @"MakerOnly_device_uuid_key"
+#define kKeychainServiceName @"MakerOnly_keychain_service"
+
+#define kLoginName @"MakerOnly_username"
+#define kLoginPsw @"MakerOnly_pwd"
+
+#define LOGIN_NAME [[NSUserDefaults standardUserDefaults] objectForKey:kLoginName]
+#define LOGIN_PSW [[NSUserDefaults standardUserDefaults] objectForKey:kLoginPsw]
+

@@ -10,12 +10,23 @@
 
 #import "RegisterViewController.h"
 #import "ForgotPSWViewController.h"
+#import "MainViewController.h"
+#import "AppDelegate.h"
 @interface LoginViewController ()<UIScrollViewDelegate>
 
 @end
 
 @implementation LoginViewController
 
+- (void)dealloc{
+    [[NSNotificationCenter defaultCenter]removeObserver:self
+                                                   name:UIKeyboardWillShowNotification
+                                                 object:nil];
+    
+    [[NSNotificationCenter defaultCenter]removeObserver:self
+                                                   name:UIKeyboardWillHideNotification
+                                                 object:nil];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardDidShow:) name:UIKeyboardWillShowNotification object:nil];
@@ -32,6 +43,8 @@
     self.loginBtn.layer.cornerRadius = 5;
     self.loginBtn.layer.masksToBounds = YES;
     
+    self.passwordField.secureTextEntry = YES;
+    
     [self.loginBtn addTarget:self action:@selector(loginBtnClick) forControlEvents:(UIControlEventTouchUpInside)];
     [self.registerBtn addTarget:self action:@selector(registerBtnClick) forControlEvents:(UIControlEventTouchUpInside)];
     [self.fortgotPWDBtn addTarget:self action:@selector(fortgotPWDBtnClick) forControlEvents:(UIControlEventTouchUpInside)];
@@ -39,7 +52,10 @@
 
 //登录按钮事件
 - (void)loginBtnClick{
-    JDLog(@"登录");
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    MainViewController *mVC = [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
+    appDelegate.window.rootViewController = mVC;
+    
 }
 
 //注册按钮事件

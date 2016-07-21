@@ -46,10 +46,10 @@
         cell = [[UITableViewCell alloc] initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:identifile];
     }
     
-    cell.textLabel.text = @"名客来名客来名客来名客来名客来";
+    cell.textLabel.text = @"名客来名客来名客来";
     return cell;
 }
-
+ 
 //- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
 //    return 0;
 //}

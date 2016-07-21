@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"注册";
+    self.navigationItem.title = @"Create Account";
     UIButton *backBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
     [backBtn setImage:[UIImage imageNamed:@"back_black"] forState:(UIControlStateNormal)];
     [backBtn addTarget:self action:@selector(backBtnClick) forControlEvents:(UIControlEventTouchUpInside)];

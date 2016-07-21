@@ -17,6 +17,8 @@
 @property (nonatomic, strong) MyProfilePhotoView *headerView;
 
 @property (nonatomic, strong) NSArray *listArray;
+
+@property (nonatomic, strong) NSArray *detailArray;
 @end
 
 @implementation MyProfileViewController
@@ -40,6 +42,7 @@
 - (void)initTableView{
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREENH_HEIGHT) style:(UITableViewStyleGrouped)];
     [self.view addSubview:self.tableView];
+    self.tableView.showsVerticalScrollIndicator = NO;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.headerView = [[[NSBundle mainBundle] loadNibNamed:@"MyProfilePhotoView" owner:self options:nil] firstObject];
@@ -47,6 +50,7 @@
     self.tableView.tableHeaderView = self.headerView;
     
     self.listArray = @[@[@"Name", @"Gender", @"Email"],@[@"Contact", @"Postal",],@[@"Tel", @"Fax", @"Mobile"]];
+    self.detailArray = @[@[@"Jared", @"male", @"guanxw@163.com"], @[@"05318866888",@"gaoxinqu"], @[@"15266375187",@"",@""]];
     
 }
 
@@ -68,7 +72,7 @@
     }
     cell.textLabel.text = [self.listArray[indexPath.section] objectAtIndex:indexPath.row];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    cell.detailTextLabel.text = @"MakeOnly";
+    cell.detailTextLabel.text = [self.detailArray[indexPath.section] objectAtIndex:indexPath.row];
     return cell;
 }
 
