@@ -9,6 +9,7 @@
 #import "MyCenterViewController.h"
 #import "CenterHeaderView.h"
 #import "MyProfileViewController.h"
+#import "SetingViewController.h"
 
 @interface MyCenterViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
@@ -50,8 +51,17 @@
     
     UITapGestureRecognizer *iconTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(iconAction)];
     [self.headerView.iconImage addGestureRecognizer:iconTap];
+    [self.headerView.setBtn addTarget:self action:@selector(setBtClick) forControlEvents:(UIControlEventTouchUpInside)];
 }
 
+// 点击设置按钮
+- (void)setBtClick{
+    SetingViewController *sVC = [[SetingViewController alloc] initWithNibName:@"SetingViewController" bundle:nil];
+//    UINavigationController *nVC = [[UINavigationController alloc] initWithRootViewController:sVC];
+    [self.navigationController pushViewController:sVC animated:YES];
+}
+
+//点击用户头像
 - (void)iconAction{
     MyProfileViewController *mpVC = [[MyProfileViewController alloc] initWithNibName:@"MyProfileViewController" bundle:nil];
     

@@ -11,6 +11,7 @@
 @interface CenterHeaderView : UIView
 @property (weak, nonatomic) IBOutlet UIImageView *iconImage;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UIButton *setBtn;
 
 - (void)initViews;
 

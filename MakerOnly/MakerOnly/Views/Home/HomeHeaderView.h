@@ -12,6 +12,5 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *headerScrollView;
 @property (weak, nonatomic) IBOutlet UIPageControl *headerPageControl;
 
-
 - (void)initViews;
 @end
