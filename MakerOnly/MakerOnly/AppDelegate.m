@@ -27,9 +27,9 @@
         GuideViewController *gVC = [[GuideViewController alloc] initWithNibName:@"GuideViewController" bundle:nil];
         self.window.rootViewController = gVC;
     }else{
-//        MainViewController *mVC = [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
+        MainViewController *mVC = [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
         LoginViewController *logVC = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
-        self.window.rootViewController = logVC;
+        self.window.rootViewController = mVC;
     }
     
     

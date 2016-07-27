@@ -45,6 +45,8 @@
 		61095F591D3CD76700D57381 /* SetingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61095F571D3CD76700D57381 /* SetingViewController.xib */; };
 		61095F5D1D3CD79500D57381 /* MyProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61095F5B1D3CD79500D57381 /* MyProfileViewController.m */; };
 		61095F5E1D3CD79500D57381 /* MyProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61095F5C1D3CD79500D57381 /* MyProfileViewController.xib */; };
+		610CC6011D473AEF00897449 /* MyOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 610CC5FF1D473AEF00897449 /* MyOrderViewController.m */; };
+		610CC6021D473AEF00897449 /* MyOrderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 610CC6001D473AEF00897449 /* MyOrderViewController.xib */; };
 		610DA6AE1D38BACC001A5627 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 610DA6AD1D38BACC001A5627 /* main.m */; };
 		610DA6B11D38BACC001A5627 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 610DA6B01D38BACC001A5627 /* AppDelegate.m */; };
 		610DA6B71D38BACC001A5627 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 610DA6B51D38BACC001A5627 /* Main.storyboard */; };
@@ -64,6 +66,11 @@
 		610DA7221D38BD89001A5627 /* SourceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 610DA7201D38BD89001A5627 /* SourceViewController.xib */; };
 		610DA72A1D38D124001A5627 /* CenterHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 610DA7291D38D124001A5627 /* CenterHeaderView.m */; };
 		610DA7301D38D16A001A5627 /* CenterHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 610DA72F1D38D16A001A5627 /* CenterHeaderView.xib */; };
+		612EC5A21D4856C900B3605E /* JaredButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 612EC5A11D4856C900B3605E /* JaredButton.m */; };
+		612EC5AB1D488F7600B3605E /* RecentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 612EC5A91D488F7600B3605E /* RecentViewController.m */; };
+		612EC5AC1D488F7600B3605E /* RecentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 612EC5AA1D488F7600B3605E /* RecentViewController.xib */; };
+		612EC5B01D488F8700B3605E /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 612EC5AE1D488F8700B3605E /* ContactsViewController.m */; };
+		612EC5B11D488F8700B3605E /* ContactsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 612EC5AF1D488F8700B3605E /* ContactsViewController.xib */; };
 		61B0A5A91D3DC3060084CBB8 /* MyProfilePhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B0A5A81D3DC3060084CBB8 /* MyProfilePhotoView.m */; };
 		61B0A5AB1D3DC3200084CBB8 /* MyProfilePhotoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61B0A5AA1D3DC3200084CBB8 /* MyProfilePhotoView.xib */; };
 		61B0A5B11D3F0A2B0084CBB8 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B0A5AF1D3F0A2B0084CBB8 /* LoginViewController.m */; };
@@ -222,6 +229,9 @@
 		61095F5A1D3CD79500D57381 /* MyProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProfileViewController.h; sourceTree = "<group>"; };
 		61095F5B1D3CD79500D57381 /* MyProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProfileViewController.m; sourceTree = "<group>"; };
 		61095F5C1D3CD79500D57381 /* MyProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyProfileViewController.xib; sourceTree = "<group>"; };
+		610CC5FE1D473AEF00897449 /* MyOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyOrderViewController.h; sourceTree = "<group>"; };
+		610CC5FF1D473AEF00897449 /* MyOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyOrderViewController.m; sourceTree = "<group>"; };
+		610CC6001D473AEF00897449 /* MyOrderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyOrderViewController.xib; sourceTree = "<group>"; };
 		610DA6A91D38BACC001A5627 /* MakerOnly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MakerOnly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		610DA6AD1D38BACC001A5627 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		610DA6AF1D38BACC001A5627 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -255,6 +265,14 @@
 		610DA7281D38D124001A5627 /* CenterHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CenterHeaderView.h; sourceTree = "<group>"; };
 		610DA7291D38D124001A5627 /* CenterHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CenterHeaderView.m; sourceTree = "<group>"; };
 		610DA72F1D38D16A001A5627 /* CenterHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CenterHeaderView.xib; sourceTree = "<group>"; };
+		612EC5A01D4856C900B3605E /* JaredButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JaredButton.h; sourceTree = "<group>"; };
+		612EC5A11D4856C900B3605E /* JaredButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JaredButton.m; sourceTree = "<group>"; };
+		612EC5A81D488F7600B3605E /* RecentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecentViewController.h; sourceTree = "<group>"; };
+		612EC5A91D488F7600B3605E /* RecentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecentViewController.m; sourceTree = "<group>"; };
+		612EC5AA1D488F7600B3605E /* RecentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecentViewController.xib; sourceTree = "<group>"; };
+		612EC5AD1D488F8700B3605E /* ContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsViewController.h; sourceTree = "<group>"; };
+		612EC5AE1D488F8700B3605E /* ContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsViewController.m; sourceTree = "<group>"; };
+		612EC5AF1D488F8700B3605E /* ContactsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactsViewController.xib; sourceTree = "<group>"; };
 		61B0A5A71D3DC3060084CBB8 /* MyProfilePhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProfilePhotoView.h; sourceTree = "<group>"; };
 		61B0A5A81D3DC3060084CBB8 /* MyProfilePhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProfilePhotoView.m; sourceTree = "<group>"; };
 		61B0A5AA1D3DC3200084CBB8 /* MyProfilePhotoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyProfilePhotoView.xib; sourceTree = "<group>"; };
@@ -530,6 +548,16 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		610CC5FD1D473AD000897449 /* ContentControllers */ = {
+			isa = PBXGroup;
+			children = (
+				610CC5FE1D473AEF00897449 /* MyOrderViewController.h */,
+				610CC5FF1D473AEF00897449 /* MyOrderViewController.m */,
+				610CC6001D473AEF00897449 /* MyOrderViewController.xib */,
+			);
+			path = ContentControllers;
+			sourceTree = "<group>";
+		};
 		610DA6A01D38BACC001A5627 = {
 			isa = PBXGroup;
 			children = (
@@ -637,6 +665,7 @@
 		610DA7051D38BCDB001A5627 /* Third */ = {
 			isa = PBXGroup;
 			children = (
+				612EC59E1D48567700B3605E /* Custom */,
 				61040B991D405A0B0010D59D /* Category */,
 				61040B5C1D4058CE0010D59D /* AFNetworking */,
 				61040B551D4058AF0010D59D /* HMAC_SHA1 */,
@@ -686,6 +715,7 @@
 		610DA7091D38BD20001A5627 /* Messanger */ = {
 			isa = PBXGroup;
 			children = (
+				612EC5A71D488F3F00B3605E /* ContentControllers */,
 				610DA7141D38BD6E001A5627 /* MessangerViewController.h */,
 				610DA7151D38BD6E001A5627 /* MessangerViewController.m */,
 				610DA7161D38BD6E001A5627 /* MessangerViewController.xib */,
@@ -696,6 +726,7 @@
 		610DA70A1D38BD20001A5627 /* MyCenter */ = {
 			isa = PBXGroup;
 			children = (
+				610CC5FD1D473AD000897449 /* ContentControllers */,
 				610DA7191D38BD7E001A5627 /* MyCenterViewController.h */,
 				610DA71A1D38BD7E001A5627 /* MyCenterViewController.m */,
 				610DA71B1D38BD7E001A5627 /* MyCenterViewController.xib */,
@@ -754,6 +785,36 @@
 			children = (
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		612EC59E1D48567700B3605E /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				612EC59F1D4856C900B3605E /* JaredButtom */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		612EC59F1D4856C900B3605E /* JaredButtom */ = {
+			isa = PBXGroup;
+			children = (
+				612EC5A01D4856C900B3605E /* JaredButton.h */,
+				612EC5A11D4856C900B3605E /* JaredButton.m */,
+			);
+			path = JaredButtom;
+			sourceTree = "<group>";
+		};
+		612EC5A71D488F3F00B3605E /* ContentControllers */ = {
+			isa = PBXGroup;
+			children = (
+				612EC5A81D488F7600B3605E /* RecentViewController.h */,
+				612EC5A91D488F7600B3605E /* RecentViewController.m */,
+				612EC5AA1D488F7600B3605E /* RecentViewController.xib */,
+				612EC5AD1D488F8700B3605E /* ContactsViewController.h */,
+				612EC5AE1D488F8700B3605E /* ContactsViewController.m */,
+				612EC5AF1D488F8700B3605E /* ContactsViewController.xib */,
+			);
+			path = ContentControllers;
 			sourceTree = "<group>";
 		};
 		61B0A5AD1D3F0A140084CBB8 /* Login */ = {
@@ -1117,11 +1178,14 @@
 				61B0A5AB1D3DC3200084CBB8 /* MyProfilePhotoView.xib in Resources */,
 				61095F121D3C76D100D57381 /* HomeHeaderView.xib in Resources */,
 				610DA7301D38D16A001A5627 /* CenterHeaderView.xib in Resources */,
+				612EC5AC1D488F7600B3605E /* RecentViewController.xib in Resources */,
 				61B0A5E21D3F574C0084CBB8 /* ForgotPSWViewController.xib in Resources */,
 				61095F591D3CD76700D57381 /* SetingViewController.xib in Resources */,
+				612EC5B11D488F8700B3605E /* ContactsViewController.xib in Resources */,
 				610DA7181D38BD6E001A5627 /* MessangerViewController.xib in Resources */,
 				610DA6BC1D38BACC001A5627 /* Assets.xcassets in Resources */,
 				61B0A5B71D3F0A440084CBB8 /* RegisterViewController.xib in Resources */,
+				610CC6021D473AEF00897449 /* MyOrderViewController.xib in Resources */,
 				61B0A5B21D3F0A2B0084CBB8 /* LoginViewController.xib in Resources */,
 				610DA71D1D38BD7E001A5627 /* MyCenterViewController.xib in Resources */,
 				610DA6B71D38BACC001A5627 /* Main.storyboard in Resources */,
@@ -1162,12 +1226,14 @@
 				61B0A66E1D3F6B9F0084CBB8 /* ResultCodeUtil.m in Sources */,
 				61040B8D1D4058CE0010D59D /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				61B0A6571D3F6B820084CBB8 /* UIImageView+WebCache.m in Sources */,
+				612EC5A21D4856C900B3605E /* JaredButton.m in Sources */,
 				61B0A64F1D3F6B820084CBB8 /* SDWebImageDownloaderOperation.m in Sources */,
 				61040B5A1D4058AF0010D59D /* base64.m in Sources */,
 				61B0A61F1D3F6B5C0084CBB8 /* MJRefreshConst.m in Sources */,
 				61040B881D4058CE0010D59D /* AFURLConnectionOperation.m in Sources */,
 				61B0A5DA1D3F12A20084CBB8 /* MASViewConstraint.m in Sources */,
 				61B0A6551D3F6B820084CBB8 /* UIImage+WebP.m in Sources */,
+				612EC5B01D488F8700B3605E /* ContactsViewController.m in Sources */,
 				610DA6BA1D38BACC001A5627 /* MakerOnly.xcdatamodeld in Sources */,
 				61B0A64C1D3F6B820084CBB8 /* SDWebImageCompat.m in Sources */,
 				61B0A61C1D3F6B5C0084CBB8 /* MJRefreshNormalHeader.m in Sources */,
@@ -1204,6 +1270,7 @@
 				61B0A6531D3F6B820084CBB8 /* UIImage+GIF.m in Sources */,
 				61B0A6731D3F6B9F0084CBB8 /* SignUtil.m in Sources */,
 				61040B4B1D4057090010D59D /* CommonResponseHeader.m in Sources */,
+				612EC5AB1D488F7600B3605E /* RecentViewController.m in Sources */,
 				610DA7121D38BD5C001A5627 /* HomeViewController.m in Sources */,
 				61040BA01D405A0B0010D59D /* NSData+Additions.m in Sources */,
 				61B0A6111D3F6B5C0084CBB8 /* MJRefreshBackFooter.m in Sources */,
@@ -1232,6 +1299,7 @@
 				61040B891D4058CE0010D59D /* AFURLRequestSerialization.m in Sources */,
 				61B0A61B1D3F6B5C0084CBB8 /* MJRefreshGifHeader.m in Sources */,
 				61B0A64A1D3F6B820084CBB8 /* NSData+ImageContentType.m in Sources */,
+				610CC6011D473AEF00897449 /* MyOrderViewController.m in Sources */,
 				61B0A5BB1D3F0A6D0084CBB8 /* GuideViewController.m in Sources */,
 				61095F5D1D3CD79500D57381 /* MyProfileViewController.m in Sources */,
 				61B0A6701D3F6B9F0084CBB8 /* RequestCilent.m in Sources */,

@@ -11,12 +11,16 @@
 #import "MyProfileViewController.h"
 #import "SetingViewController.h"
 
+#import "MyOrderViewController.h"
+
 @interface MyCenterViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
 
 @property (nonatomic, strong) CenterHeaderView *headerView;
 
 @property (nonatomic, strong) NSArray *dataArray;
+
+@property (nonatomic, strong) NSArray *imageArray;
 
 @end
 
@@ -31,7 +35,9 @@
     [super viewDidLoad];
     self.title = @"Center";
     [self initTableView];
-    self.dataArray = @[@[@"Manage Order",@"Buying Request",@"Inquiries"],@[@"Survey",@"My Coupon"],@[@"Help Center"]];
+//    self.dataArray = @[@[@"Manage Order",@"Buying Request",@"Inquiries"],@[@"Survey",@"My Coupon"],@[@"Help Center"]];
+    self.dataArray = @[@[@"我的订单",@"已买到宝贝",@"购物车"],@[@"我的优惠券",@"积分商城", @"我的卡券"],@[@"退款管理", @"售后管理", @"投诉管理"]];
+    self.imageArray = @[@[@"my_dingdan",@"my_yimai",@"my_gouwuche"], @[@"my_youhui",@"my_jifen",@"my_kajuan"], @[@"my_tuikuan",@"my_souhou",@"my_tousu"]];
 }
 
 - (void)initTableView{
@@ -39,12 +45,14 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
+    self.tableView.bounces = NO;
+    self.tableView.showsVerticalScrollIndicator = NO;
     
     self.headerView = [[[NSBundle mainBundle] loadNibNamed:@"CenterHeaderView" owner:self options:nil] firstObject];
     [self.headerView initViews];
     self.tableView.tableHeaderView = self.headerView;
     self.dataArray = [NSArray array];
-    self.tableView.bounces = NO;
+//    self.tableView.bounces = NO;
     self.tableView.tableFooterView = [[UIView alloc] init];
     
     self.headerView.iconImage.userInteractionEnabled = YES;
@@ -86,30 +94,39 @@
     }
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     cell.textLabel.text = [self.dataArray[indexPath.section] objectAtIndex:indexPath.row];
-    
+    cell.imageView.image = [UIImage imageNamed:[self.imageArray[indexPath.section] objectAtIndex:indexPath.row]];
+    cell.imageView.transform = CGAffineTransformMakeScale(1, 1);
     
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     
-    return 20;
+    return 15;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-//    JDLog(@"选择cell");
     if (indexPath.section == 0 && indexPath.row == 0) {
-        JDLog(@"Manager Orde");
+        JDLog(@"我的订单");
+        MyOrderViewController *moVC = [[MyOrderViewController alloc] initWithNibName:@"MyOrderViewController" bundle:nil];
+        moVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:moVC animated:YES];
     }else if (indexPath.section == 0 && indexPath.row == 1){
-        JDLog(@"Buying Request");
+        JDLog(@"已购买宝贝");
     }else if (indexPath.section == 0 && indexPath.row == 2){
-        JDLog(@"Inquiries");
+        JDLog(@"购物车");
     }else if (indexPath.section == 1 && indexPath.row == 0){
-        JDLog(@"Survey");
+        JDLog(@"我的优惠券");
     }else if (indexPath.section == 1 && indexPath.row == 1){
-        JDLog(@"My Coupon");
+        JDLog(@"积分商城");
+    }else if (indexPath.section == 1 && indexPath.row == 2){
+        JDLog(@"我的卡券");
     }else if (indexPath.section == 2 && indexPath.row == 0){
-        JDLog(@"Help Center");
+        JDLog(@"退款管理");
+    }else if (indexPath.section == 2 && indexPath.row == 1){
+        JDLog(@"售后管理");
+    }else if (indexPath.section == 2 && indexPath.row == 2){
+        JDLog(@"投诉管理");
     }
 }
 

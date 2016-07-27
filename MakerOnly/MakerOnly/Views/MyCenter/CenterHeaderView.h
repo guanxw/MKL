@@ -12,7 +12,10 @@
 @property (weak, nonatomic) IBOutlet UIImageView *iconImage;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UIButton *setBtn;
-
+@property (weak, nonatomic) IBOutlet UIView *favoriteView;
+@property (weak, nonatomic) IBOutlet UILabel *productNum;
+@property (weak, nonatomic) IBOutlet UILabel *companiesNum;
+@property (weak, nonatomic) IBOutlet UILabel *browsingNum;
 - (void)initViews;
 
 @end

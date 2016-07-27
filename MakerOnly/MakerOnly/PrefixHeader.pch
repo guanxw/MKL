@@ -184,6 +184,8 @@ item.alpha = 0.0; \
 #define nilOrJSONObjectForKey(JSON_, KEY_) [[JSON_ objectForKey:KEY_] isKindOfClass:[NSNull class]] ? nil : [JSON_ objectForKey:KEY_]
 
 #import "InterfaceUrlDefine.h"
+#import "Masonry.h"
+#import "JaredButton.h"
 
 /*
 
@@ -202,6 +204,8 @@ item.alpha = 0.0; \
 #define kKeychainServiceName @""
 
 */
+
+#define VIEWFRAME self.view.frame.size.width
 
 #define kAccessKeyInKeychain @"MakerOnly_login_access_key"
 #define kSecretKeyInKeychain @"MakerOnly_login_secret_key"

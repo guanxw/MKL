@@ -35,6 +35,7 @@
     [self.view addGestureRecognizer:hideKeyboardTap];
     
     [self initViews];
+    
 }
 
 - (void)initViews{
