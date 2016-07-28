@@ -12,7 +12,9 @@
 @property (weak, nonatomic) IBOutlet UIImageView *iconImage;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UIButton *setBtn;
-@property (weak, nonatomic) IBOutlet UIView *favoriteView;
+@property (weak, nonatomic) IBOutlet UIView *productView;
+@property (weak, nonatomic) IBOutlet UIView *companiesView;
+@property (weak, nonatomic) IBOutlet UIView *browsingView;
 @property (weak, nonatomic) IBOutlet UILabel *productNum;
 @property (weak, nonatomic) IBOutlet UILabel *companiesNum;
 @property (weak, nonatomic) IBOutlet UILabel *browsingNum;

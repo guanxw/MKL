@@ -38,8 +38,10 @@
 //    self.dataArray = @[@[@"Manage Order",@"Buying Request",@"Inquiries"],@[@"Survey",@"My Coupon"],@[@"Help Center"]];
     self.dataArray = @[@[@"我的订单",@"已买到宝贝",@"购物车"],@[@"我的优惠券",@"积分商城", @"我的卡券"],@[@"退款管理", @"售后管理", @"投诉管理"]];
     self.imageArray = @[@[@"my_dingdan",@"my_yimai",@"my_gouwuche"], @[@"my_youhui",@"my_jifen",@"my_kajuan"], @[@"my_tuikuan",@"my_souhou",@"my_tousu"]];
+    [self setUpHeaderBottomView];
 }
 
+#pragma mark -初始化tableView
 - (void)initTableView{
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, -20, SCREEN_WIDTH, SCREENH_HEIGHT) style:(UITableViewStylePlain)];
     self.tableView.delegate = self;
@@ -52,7 +54,6 @@
     [self.headerView initViews];
     self.tableView.tableHeaderView = self.headerView;
     self.dataArray = [NSArray array];
-//    self.tableView.bounces = NO;
     self.tableView.tableFooterView = [[UIView alloc] init];
     
     self.headerView.iconImage.userInteractionEnabled = YES;
@@ -61,15 +62,38 @@
     [self.headerView.iconImage addGestureRecognizer:iconTap];
     [self.headerView.setBtn addTarget:self action:@selector(setBtClick) forControlEvents:(UIControlEventTouchUpInside)];
 }
+#pragma mark -个人中心姓名下面添加点击手势
+- (void)setUpHeaderBottomView{
+    UITapGestureRecognizer *productTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(productViewClick)];
+    [self.headerView.productView addGestureRecognizer:productTap];
+    
+    UITapGestureRecognizer *companiesTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(companiesViewClick)];
+    [self.headerView.companiesView addGestureRecognizer:companiesTap];
+    
+    UITapGestureRecognizer *browsingTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(browsingViewClick)];
+    [self.headerView.browsingView addGestureRecognizer:browsingTap];
+}
 
-// 点击设置按钮
+#pragma mark -个人中心姓名下面添加点击手势点击事件
+- (void)productViewClick{
+    JDLog(@"productViewClick");
+}
+
+- (void)companiesViewClick{
+    JDLog(@"companiesViewClick");
+}
+
+- (void)browsingViewClick{
+    JDLog(@"browsingViewClick");
+}
+
+#pragma mark - 设置按钮点击事件
 - (void)setBtClick{
     SetingViewController *sVC = [[SetingViewController alloc] initWithNibName:@"SetingViewController" bundle:nil];
-//    UINavigationController *nVC = [[UINavigationController alloc] initWithRootViewController:sVC];
     [self.navigationController pushViewController:sVC animated:YES];
 }
 
-//点击用户头像
+#pragma mark -用户头像点击事件
 - (void)iconAction{
     MyProfileViewController *mpVC = [[MyProfileViewController alloc] initWithNibName:@"MyProfileViewController" bundle:nil];
     
@@ -78,6 +102,7 @@
     
 }
 
+#pragma mark -tableViewDelegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return self.dataArray.count;
 }
@@ -130,7 +155,7 @@
     }
 }
 
-// 解决cell下面的分割线显示不全
+#pragma mark - 解决cell下面的分割线显示不全
 -(void)viewDidLayoutSubviews {
     if ([self.tableView respondsToSelector:@selector(setSeparatorInset:)]) {
         [self.tableView setSeparatorInset:UIEdgeInsetsZero];
@@ -140,7 +165,7 @@
         [self.tableView setLayoutMargins:UIEdgeInsetsZero];
     }
 }
-// 解决cell下面的分割线显示不全
+#pragma mark - 解决cell下面的分割线显示不全
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPat{
     if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
         [cell setLayoutMargins:UIEdgeInsetsZero];
@@ -152,7 +177,6 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 

@@ -67,10 +67,10 @@
 		610DA72A1D38D124001A5627 /* CenterHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 610DA7291D38D124001A5627 /* CenterHeaderView.m */; };
 		610DA7301D38D16A001A5627 /* CenterHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 610DA72F1D38D16A001A5627 /* CenterHeaderView.xib */; };
 		612EC5A21D4856C900B3605E /* JaredButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 612EC5A11D4856C900B3605E /* JaredButton.m */; };
-		612EC5AB1D488F7600B3605E /* RecentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 612EC5A91D488F7600B3605E /* RecentViewController.m */; };
-		612EC5AC1D488F7600B3605E /* RecentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 612EC5AA1D488F7600B3605E /* RecentViewController.xib */; };
-		612EC5B01D488F8700B3605E /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 612EC5AE1D488F8700B3605E /* ContactsViewController.m */; };
-		612EC5B11D488F8700B3605E /* ContactsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 612EC5AF1D488F8700B3605E /* ContactsViewController.xib */; };
+		612EC5B51D49969F00B3605E /* RecentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 612EC5B31D49969F00B3605E /* RecentViewController.m */; };
+		612EC5B61D49969F00B3605E /* RecentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 612EC5B41D49969F00B3605E /* RecentViewController.xib */; };
+		612EC5BA1D4996BD00B3605E /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 612EC5B81D4996BD00B3605E /* ContactsViewController.m */; };
+		612EC5BB1D4996BD00B3605E /* ContactsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 612EC5B91D4996BD00B3605E /* ContactsViewController.xib */; };
 		61B0A5A91D3DC3060084CBB8 /* MyProfilePhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B0A5A81D3DC3060084CBB8 /* MyProfilePhotoView.m */; };
 		61B0A5AB1D3DC3200084CBB8 /* MyProfilePhotoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61B0A5AA1D3DC3200084CBB8 /* MyProfilePhotoView.xib */; };
 		61B0A5B11D3F0A2B0084CBB8 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B0A5AF1D3F0A2B0084CBB8 /* LoginViewController.m */; };
@@ -267,12 +267,12 @@
 		610DA72F1D38D16A001A5627 /* CenterHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CenterHeaderView.xib; sourceTree = "<group>"; };
 		612EC5A01D4856C900B3605E /* JaredButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JaredButton.h; sourceTree = "<group>"; };
 		612EC5A11D4856C900B3605E /* JaredButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JaredButton.m; sourceTree = "<group>"; };
-		612EC5A81D488F7600B3605E /* RecentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecentViewController.h; sourceTree = "<group>"; };
-		612EC5A91D488F7600B3605E /* RecentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecentViewController.m; sourceTree = "<group>"; };
-		612EC5AA1D488F7600B3605E /* RecentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecentViewController.xib; sourceTree = "<group>"; };
-		612EC5AD1D488F8700B3605E /* ContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsViewController.h; sourceTree = "<group>"; };
-		612EC5AE1D488F8700B3605E /* ContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsViewController.m; sourceTree = "<group>"; };
-		612EC5AF1D488F8700B3605E /* ContactsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactsViewController.xib; sourceTree = "<group>"; };
+		612EC5B21D49969F00B3605E /* RecentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecentViewController.h; sourceTree = "<group>"; };
+		612EC5B31D49969F00B3605E /* RecentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecentViewController.m; sourceTree = "<group>"; };
+		612EC5B41D49969F00B3605E /* RecentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecentViewController.xib; sourceTree = "<group>"; };
+		612EC5B71D4996BD00B3605E /* ContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsViewController.h; sourceTree = "<group>"; };
+		612EC5B81D4996BD00B3605E /* ContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsViewController.m; sourceTree = "<group>"; };
+		612EC5B91D4996BD00B3605E /* ContactsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactsViewController.xib; sourceTree = "<group>"; };
 		61B0A5A71D3DC3060084CBB8 /* MyProfilePhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProfilePhotoView.h; sourceTree = "<group>"; };
 		61B0A5A81D3DC3060084CBB8 /* MyProfilePhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProfilePhotoView.m; sourceTree = "<group>"; };
 		61B0A5AA1D3DC3200084CBB8 /* MyProfilePhotoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyProfilePhotoView.xib; sourceTree = "<group>"; };
@@ -807,12 +807,12 @@
 		612EC5A71D488F3F00B3605E /* ContentControllers */ = {
 			isa = PBXGroup;
 			children = (
-				612EC5A81D488F7600B3605E /* RecentViewController.h */,
-				612EC5A91D488F7600B3605E /* RecentViewController.m */,
-				612EC5AA1D488F7600B3605E /* RecentViewController.xib */,
-				612EC5AD1D488F8700B3605E /* ContactsViewController.h */,
-				612EC5AE1D488F8700B3605E /* ContactsViewController.m */,
-				612EC5AF1D488F8700B3605E /* ContactsViewController.xib */,
+				612EC5B21D49969F00B3605E /* RecentViewController.h */,
+				612EC5B31D49969F00B3605E /* RecentViewController.m */,
+				612EC5B41D49969F00B3605E /* RecentViewController.xib */,
+				612EC5B71D4996BD00B3605E /* ContactsViewController.h */,
+				612EC5B81D4996BD00B3605E /* ContactsViewController.m */,
+				612EC5B91D4996BD00B3605E /* ContactsViewController.xib */,
 			);
 			path = ContentControllers;
 			sourceTree = "<group>";
@@ -1178,14 +1178,14 @@
 				61B0A5AB1D3DC3200084CBB8 /* MyProfilePhotoView.xib in Resources */,
 				61095F121D3C76D100D57381 /* HomeHeaderView.xib in Resources */,
 				610DA7301D38D16A001A5627 /* CenterHeaderView.xib in Resources */,
-				612EC5AC1D488F7600B3605E /* RecentViewController.xib in Resources */,
 				61B0A5E21D3F574C0084CBB8 /* ForgotPSWViewController.xib in Resources */,
 				61095F591D3CD76700D57381 /* SetingViewController.xib in Resources */,
-				612EC5B11D488F8700B3605E /* ContactsViewController.xib in Resources */,
 				610DA7181D38BD6E001A5627 /* MessangerViewController.xib in Resources */,
+				612EC5BB1D4996BD00B3605E /* ContactsViewController.xib in Resources */,
 				610DA6BC1D38BACC001A5627 /* Assets.xcassets in Resources */,
 				61B0A5B71D3F0A440084CBB8 /* RegisterViewController.xib in Resources */,
 				610CC6021D473AEF00897449 /* MyOrderViewController.xib in Resources */,
+				612EC5B61D49969F00B3605E /* RecentViewController.xib in Resources */,
 				61B0A5B21D3F0A2B0084CBB8 /* LoginViewController.xib in Resources */,
 				610DA71D1D38BD7E001A5627 /* MyCenterViewController.xib in Resources */,
 				610DA6B71D38BACC001A5627 /* Main.storyboard in Resources */,
@@ -1233,7 +1233,7 @@
 				61040B881D4058CE0010D59D /* AFURLConnectionOperation.m in Sources */,
 				61B0A5DA1D3F12A20084CBB8 /* MASViewConstraint.m in Sources */,
 				61B0A6551D3F6B820084CBB8 /* UIImage+WebP.m in Sources */,
-				612EC5B01D488F8700B3605E /* ContactsViewController.m in Sources */,
+				612EC5BA1D4996BD00B3605E /* ContactsViewController.m in Sources */,
 				610DA6BA1D38BACC001A5627 /* MakerOnly.xcdatamodeld in Sources */,
 				61B0A64C1D3F6B820084CBB8 /* SDWebImageCompat.m in Sources */,
 				61B0A61C1D3F6B5C0084CBB8 /* MJRefreshNormalHeader.m in Sources */,
@@ -1270,7 +1270,6 @@
 				61B0A6531D3F6B820084CBB8 /* UIImage+GIF.m in Sources */,
 				61B0A6731D3F6B9F0084CBB8 /* SignUtil.m in Sources */,
 				61040B4B1D4057090010D59D /* CommonResponseHeader.m in Sources */,
-				612EC5AB1D488F7600B3605E /* RecentViewController.m in Sources */,
 				610DA7121D38BD5C001A5627 /* HomeViewController.m in Sources */,
 				61040BA01D405A0B0010D59D /* NSData+Additions.m in Sources */,
 				61B0A6111D3F6B5C0084CBB8 /* MJRefreshBackFooter.m in Sources */,
@@ -1314,6 +1313,7 @@
 				61040B8B1D4058CE0010D59D /* AFURLSessionManager.m in Sources */,
 				61B0A64E1D3F6B820084CBB8 /* SDWebImageDownloader.m in Sources */,
 				61B0A6191D3F6B5C0084CBB8 /* MJRefreshBackNormalFooter.m in Sources */,
+				612EC5B51D49969F00B3605E /* RecentViewController.m in Sources */,
 				61040BA11D405A0B0010D59D /* NSDate+DynamicDateString.m in Sources */,
 				61B0A6211D3F6B5C0084CBB8 /* UIScrollView+MJRefresh.m in Sources */,
 				61B0A5DC1D3F12A20084CBB8 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,

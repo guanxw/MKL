@@ -26,6 +26,7 @@
     [self initNavController];
 }
 
+#pragma mark -封装UITabBarItem
 - (UITabBarItem *)itemWithTitle:(NSString *)title
                           image:(UIImage *)image
                   selectedImage:(UIImage *)selectedImage{
@@ -38,14 +39,11 @@
         tabBarItem = [[UITabBarItem alloc] init];
         [tabBarItem setFinishedSelectedImage:selectedImage withFinishedUnselectedImage:image];
     }
-//    [tabBarItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor darkGrayColor],NSForegroundColorAttributeName, nil] forState:(UIControlStateNormal)];
     return tabBarItem;
 }
-
+#pragma mark -加载UINavigationController
 - (void)initNavController{
     
-    
-//    [[UITabBarItem appearance] setTitleTextAttributes:<#(nullable NSDictionary<NSString *,id> *)#> forState:<#(UIControlState)#>]
     [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor redColor],NSForegroundColorAttributeName, nil] forState:UIControlStateSelected];
     
     [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor darkGrayColor],NSForegroundColorAttributeName, nil] forState:UIControlStateHighlighted];

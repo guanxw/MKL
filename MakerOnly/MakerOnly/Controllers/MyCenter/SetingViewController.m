@@ -21,15 +21,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"Settings";
-    UIButton *backBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
-    [backBtn setImage:[UIImage imageNamed:@"back_black"] forState:(UIControlStateNormal)];
-    [backBtn addTarget:self action:@selector(backBtnClick) forControlEvents:(UIControlEventTouchUpInside)];
-    UIBarButtonItem *leftBarBtn = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
-    self.navigationItem.leftBarButtonItem = leftBarBtn;
+    JaredButton *backbtn = [JaredButton shareButton];
+    self.navigationItem.leftBarButtonItem = [backbtn setBarButtonItemWithBackButton:backbtn imageName:@"back_black"];
+    //返回按钮点击事件
+    [backbtn addTarget:^{
+        [self.navigationController popViewControllerAnimated:YES];
+    }];
     
     [self initTableView];
 }
-
+#pragma mark -初始化tableView
 - (void)initTableView{
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREENH_HEIGHT)];
     [self.view addSubview:self.tableView];
@@ -37,6 +38,7 @@
     self.tableView.dataSource = self;
 }
 
+#pragma mark -tableViewDelegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 2;
 }
@@ -57,10 +59,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     return 10;
 }
-- (void)backBtnClick{
-    [self.navigationController popViewControllerAnimated:YES];
-    
-}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

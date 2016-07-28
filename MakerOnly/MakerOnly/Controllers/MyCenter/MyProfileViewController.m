@@ -30,15 +30,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"MyProfile";
-    UIButton *backBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
-    [backBtn setImage:[UIImage imageNamed:@"back_black"] forState:(UIControlStateNormal)];
-    [backBtn addTarget:self action:@selector(backAction) forControlEvents:(UIControlEventTouchUpInside)];
-    UIBarButtonItem *leftBtnItem = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
-    self.navigationItem.leftBarButtonItem = leftBtnItem;
+    JaredButton *backBtn = [JaredButton shareButton];
+    self.navigationItem.leftBarButtonItem = [backBtn setBarButtonItemWithBackButton:backBtn imageName:@"back_black"];
+    //返回按钮点击事件
+    [backBtn addTarget:^{
+        [self.navigationController popViewControllerAnimated:YES];
+    }];
     
     [self initTableView];
 }
 
+#pragma mark - 初始化tableView
 - (void)initTableView{
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREENH_HEIGHT) style:(UITableViewStyleGrouped)];
     [self.view addSubview:self.tableView];
@@ -53,7 +55,7 @@
     self.detailArray = @[@[@"Jared", @"male", @"guanxw@163.com"], @[@"05318866888",@"gaoxinqu"], @[@"15266375187",@"",@""]];
     
 }
-
+#pragma mark - tableViewDelegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return self.listArray.count;
     
@@ -80,10 +82,7 @@
     return 5;
 }
 
-//返回按钮事件
-- (void)backAction{
-    [self.navigationController popViewControllerAnimated:YES];
-}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -55,6 +55,7 @@
     _search.placeholder = @"搜索商品";
 }
 
+#pragma mark --tableViewDelegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 2;
 }

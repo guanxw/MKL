@@ -18,19 +18,12 @@
     self.iconImage.layer.cornerRadius = self.iconImage.frame.size.width/2;
     self.iconImage.layer.masksToBounds = YES;
     self.nameLabel.text = @"Jared";
-//    [self setupfavoriteView];
+    [self bottomView];
 }
 
-- (void)setupfavoriteView{
-    UIView *productView = [[UIView alloc] init];
-    productView.backgroundColor = [UIColor purpleColor];
-    [self addSubview:productView];
-    [productView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.equalTo(self.mas_bottom).offset(0);
-        make.width.mas_equalTo(self.frame.size.width/3);
-        make.height.mas_equalTo(make.width);
-        make.left.equalTo(self).offset(0);
-    }];
+- (void)bottomView{
+    
+    
 }
 
 

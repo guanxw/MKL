@@ -17,6 +17,7 @@
 
 @implementation HomeHeaderView
 
+#pragma mark - 初始化View
 - (void)initViews{
     self.frame = CGRectMake(0, 0, SCREEN_WIDTH, 120);
     self.headerScrollView.contentSize = CGSizeMake(ImageCount *self.frame.size.width, 0);
@@ -38,20 +39,9 @@
     self.headerPageControl.numberOfPages = ImageCount;
     self.headerPageControl.enabled = NO;
     [self addTimer];
-    
-//    [self initSearchView];
 }
-//- (void)initSearchView{
-//    UISearchBar *search = [[UISearchBar alloc] init];
-//    [self addSubview:search];
-//        [search mas_makeConstraints:^(MASConstraintMaker *make) {
-//            make.left.equalTo(self.mas_left).offset(30);
-//            make.right.equalTo(self.mas_right).offset(-30);
-//            make.top.equalTo(self.mas_top).offset(20);
-//            make.height.equalTo(@30);
-//        }];
-//    
-//}
+
+#pragma mark - scrollView的offset改变时调用
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     CGFloat X = scrollView.contentOffset.x;
     CGFloat scrollViewW = self.frame.size.width;
@@ -60,18 +50,20 @@
     
 }
 
+#pragma mark - scrollView开始拖拽时调用
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
     [self removeTimer];
 }
 
+#pragma mark - scrollView停止拖拽时调用
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
     [self addTimer];
 }
-// 开启定时器
+#pragma mark -  开启定时器
 - (void)addTimer{
     self.timer = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(nextImage) userInfo:nil repeats:YES];
 }
-
+#pragma mark - nextImage自动跳转图片
 - (void)nextImage{
     int page = (int)self.headerPageControl.currentPage;
     if (page == 2) {
@@ -83,7 +75,7 @@
     self.headerScrollView.contentOffset = CGPointMake(X, 0);
 }
 
-// 关闭定时器
+#pragma mark - 关闭定时器
 - (void)removeTimer{
     [self.timer invalidate];
 }
