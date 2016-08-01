@@ -1,5 +1,5 @@
 //
-//  HomeViewController.h
+//  QualityFactoryViewCell.h
 //  MakerOnly
 //
 //  Created by Jared on 16/7/29.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HomeViewController : UICollectionViewController
+@interface QualityFactoryViewCell : UICollectionViewCell
 
 @end
