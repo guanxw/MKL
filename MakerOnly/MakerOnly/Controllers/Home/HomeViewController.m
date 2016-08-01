@@ -24,7 +24,7 @@ static NSString * const QualityFactory = @"QualityFactory";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.collectionView.backgroundColor = [UIColor whiteColor];
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(keyBoardHide)];
     [self.view addGestureRecognizer:tap];
@@ -75,7 +75,7 @@ static NSString * const QualityFactory = @"QualityFactory";
         return CGSizeMake(SCREEN_WIDTH, W);
     }else if(indexPath.section == 1)
     {
-        return CGSizeMake(SCREEN_WIDTH * 0.48,SCREEN_WIDTH * 0.4);
+        return CGSizeMake(SCREEN_WIDTH * 0.3,SCREEN_WIDTH * 0.3);
     }else{
         return CGSizeMake(SCREEN_WIDTH, SCREEN_WIDTH * 0.5);
     }
@@ -83,7 +83,7 @@ static NSString * const QualityFactory = @"QualityFactory";
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
     if (section == 2) {
-        return UIEdgeInsetsMake(0, 0, 10, 0);
+        return UIEdgeInsetsMake(0, 0, 5, 0);
     }else{
         return UIEdgeInsetsMake(0, 0, 0, 0);
     }
@@ -102,7 +102,6 @@ static NSString * const QualityFactory = @"QualityFactory";
 
 
 #pragma mark <UICollectionViewDataSource>
-
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 2;
 }
@@ -117,7 +116,6 @@ static NSString * const QualityFactory = @"QualityFactory";
         return 3;
     }
 }
-
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {

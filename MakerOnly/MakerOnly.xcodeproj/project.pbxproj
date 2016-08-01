@@ -77,6 +77,12 @@
 		612EC6BA1D4B420000B3605E /* CategoryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 612EC6B81D4B420000B3605E /* CategoryViewCell.xib */; };
 		612EC6BE1D4B425100B3605E /* QualityFactoryViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 612EC6BC1D4B425100B3605E /* QualityFactoryViewCell.m */; };
 		612EC6BF1D4B425100B3605E /* QualityFactoryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 612EC6BD1D4B425100B3605E /* QualityFactoryViewCell.xib */; };
+		612EC6C31D4EE79A00B3605E /* FavoriteProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 612EC6C11D4EE79A00B3605E /* FavoriteProductViewController.m */; };
+		612EC6C41D4EE79A00B3605E /* FavoriteProductViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 612EC6C21D4EE79A00B3605E /* FavoriteProductViewController.xib */; };
+		612EC6C81D4EE7B000B3605E /* FavoriteCompaniesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 612EC6C61D4EE7B000B3605E /* FavoriteCompaniesViewController.m */; };
+		612EC6C91D4EE7B000B3605E /* FavoriteCompaniesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 612EC6C71D4EE7B000B3605E /* FavoriteCompaniesViewController.xib */; };
+		612EC6CD1D4EE7C500B3605E /* BrowsingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 612EC6CB1D4EE7C500B3605E /* BrowsingViewController.m */; };
+		612EC6CE1D4EE7C500B3605E /* BrowsingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 612EC6CC1D4EE7C500B3605E /* BrowsingViewController.xib */; };
 		61B0A5A91D3DC3060084CBB8 /* MyProfilePhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B0A5A81D3DC3060084CBB8 /* MyProfilePhotoView.m */; };
 		61B0A5AB1D3DC3200084CBB8 /* MyProfilePhotoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61B0A5AA1D3DC3200084CBB8 /* MyProfilePhotoView.xib */; };
 		61B0A5B11D3F0A2B0084CBB8 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B0A5AF1D3F0A2B0084CBB8 /* LoginViewController.m */; };
@@ -288,6 +294,15 @@
 		612EC6BB1D4B425100B3605E /* QualityFactoryViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QualityFactoryViewCell.h; sourceTree = "<group>"; };
 		612EC6BC1D4B425100B3605E /* QualityFactoryViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QualityFactoryViewCell.m; sourceTree = "<group>"; };
 		612EC6BD1D4B425100B3605E /* QualityFactoryViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QualityFactoryViewCell.xib; sourceTree = "<group>"; };
+		612EC6C01D4EE79A00B3605E /* FavoriteProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoriteProductViewController.h; sourceTree = "<group>"; };
+		612EC6C11D4EE79A00B3605E /* FavoriteProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoriteProductViewController.m; sourceTree = "<group>"; };
+		612EC6C21D4EE79A00B3605E /* FavoriteProductViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoriteProductViewController.xib; sourceTree = "<group>"; };
+		612EC6C51D4EE7B000B3605E /* FavoriteCompaniesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoriteCompaniesViewController.h; sourceTree = "<group>"; };
+		612EC6C61D4EE7B000B3605E /* FavoriteCompaniesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoriteCompaniesViewController.m; sourceTree = "<group>"; };
+		612EC6C71D4EE7B000B3605E /* FavoriteCompaniesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoriteCompaniesViewController.xib; sourceTree = "<group>"; };
+		612EC6CA1D4EE7C500B3605E /* BrowsingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowsingViewController.h; sourceTree = "<group>"; };
+		612EC6CB1D4EE7C500B3605E /* BrowsingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowsingViewController.m; sourceTree = "<group>"; };
+		612EC6CC1D4EE7C500B3605E /* BrowsingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BrowsingViewController.xib; sourceTree = "<group>"; };
 		61B0A5A71D3DC3060084CBB8 /* MyProfilePhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProfilePhotoView.h; sourceTree = "<group>"; };
 		61B0A5A81D3DC3060084CBB8 /* MyProfilePhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProfilePhotoView.m; sourceTree = "<group>"; };
 		61B0A5AA1D3DC3200084CBB8 /* MyProfilePhotoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyProfilePhotoView.xib; sourceTree = "<group>"; };
@@ -563,13 +578,23 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
-		610CC5FD1D473AD000897449 /* ContentControllers */ = {
+		610CC5FD1D473AD000897449 /* TopViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				610CC5FE1D473AEF00897449 /* MyOrderViewController.h */,
 				610CC5FF1D473AEF00897449 /* MyOrderViewController.m */,
 				610CC6001D473AEF00897449 /* MyOrderViewController.xib */,
+				612EC6C01D4EE79A00B3605E /* FavoriteProductViewController.h */,
+				612EC6C11D4EE79A00B3605E /* FavoriteProductViewController.m */,
+				612EC6C21D4EE79A00B3605E /* FavoriteProductViewController.xib */,
+				612EC6C51D4EE7B000B3605E /* FavoriteCompaniesViewController.h */,
+				612EC6C61D4EE7B000B3605E /* FavoriteCompaniesViewController.m */,
+				612EC6C71D4EE7B000B3605E /* FavoriteCompaniesViewController.xib */,
+				612EC6CA1D4EE7C500B3605E /* BrowsingViewController.h */,
+				612EC6CB1D4EE7C500B3605E /* BrowsingViewController.m */,
+				612EC6CC1D4EE7C500B3605E /* BrowsingViewController.xib */,
 			);
+			name = TopViewControllers;
 			path = ContentControllers;
 			sourceTree = "<group>";
 		};
@@ -741,7 +766,7 @@
 		610DA70A1D38BD20001A5627 /* MyCenter */ = {
 			isa = PBXGroup;
 			children = (
-				610CC5FD1D473AD000897449 /* ContentControllers */,
+				610CC5FD1D473AD000897449 /* TopViewControllers */,
 				610DA7191D38BD7E001A5627 /* MyCenterViewController.h */,
 				610DA71A1D38BD7E001A5627 /* MyCenterViewController.m */,
 				610DA71B1D38BD7E001A5627 /* MyCenterViewController.xib */,
@@ -1205,11 +1230,14 @@
 				61B0A5E21D3F574C0084CBB8 /* ForgotPSWViewController.xib in Resources */,
 				612EC6B01D4B3F4E00B3605E /* HomeViewController.xib in Resources */,
 				61095F591D3CD76700D57381 /* SetingViewController.xib in Resources */,
+				612EC6CE1D4EE7C500B3605E /* BrowsingViewController.xib in Resources */,
+				612EC6C91D4EE7B000B3605E /* FavoriteCompaniesViewController.xib in Resources */,
 				612EC6B51D4B419800B3605E /* TopSlideView.xib in Resources */,
 				610DA7181D38BD6E001A5627 /* MessangerViewController.xib in Resources */,
 				612EC6BF1D4B425100B3605E /* QualityFactoryViewCell.xib in Resources */,
 				612EC5BB1D4996BD00B3605E /* ContactsViewController.xib in Resources */,
 				610DA6BC1D38BACC001A5627 /* Assets.xcassets in Resources */,
+				612EC6C41D4EE79A00B3605E /* FavoriteProductViewController.xib in Resources */,
 				61B0A5B71D3F0A440084CBB8 /* RegisterViewController.xib in Resources */,
 				610CC6021D473AEF00897449 /* MyOrderViewController.xib in Resources */,
 				612EC5B61D49969F00B3605E /* RecentViewController.xib in Resources */,
@@ -1276,6 +1304,7 @@
 				61040B481D4057090010D59D /* CommonResponseBean.m in Sources */,
 				61B0A64D1D3F6B820084CBB8 /* SDWebImageDecoder.m in Sources */,
 				61B0A5B11D3F0A2B0084CBB8 /* LoginViewController.m in Sources */,
+				612EC6CD1D4EE7C500B3605E /* BrowsingViewController.m in Sources */,
 				61B0A6561D3F6B820084CBB8 /* UIImageView+HighlightedWebCache.m in Sources */,
 				61040B8F1D4058CE0010D59D /* UIButton+AFNetworking.m in Sources */,
 				61040B901D4058CE0010D59D /* UIImageView+AFNetworking.m in Sources */,
@@ -1285,6 +1314,7 @@
 				61040B871D4058CE0010D59D /* AFSecurityPolicy.m in Sources */,
 				61B0A5E11D3F574C0084CBB8 /* ForgotPSWViewController.m in Sources */,
 				61B0A6141D3F6B5C0084CBB8 /* MJRefreshHeader.m in Sources */,
+				612EC6C31D4EE79A00B3605E /* FavoriteProductViewController.m in Sources */,
 				61B0A6161D3F6B5C0084CBB8 /* MJRefreshAutoNormalFooter.m in Sources */,
 				61B0A5DD1D3F12A20084CBB8 /* View+MASAdditions.m in Sources */,
 				61B0A6541D3F6B820084CBB8 /* UIImage+MultiFormat.m in Sources */,
@@ -1322,6 +1352,7 @@
 				61040B541D40586D0010D59D /* DeviceUtil.m in Sources */,
 				610DA7171D38BD6E001A5627 /* MessangerViewController.m in Sources */,
 				61040B841D4058CE0010D59D /* AFHTTPRequestOperationManager.m in Sources */,
+				612EC6C81D4EE7B000B3605E /* FavoriteCompaniesViewController.m in Sources */,
 				61B0A6181D3F6B5C0084CBB8 /* MJRefreshBackGifFooter.m in Sources */,
 				61040B891D4058CE0010D59D /* AFURLRequestSerialization.m in Sources */,
 				61B0A61B1D3F6B5C0084CBB8 /* MJRefreshGifHeader.m in Sources */,
@@ -1492,6 +1523,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = /Users/MKL/Documents/Workplace/MKL/MakerOnly/MakerOnly/PrefixHeader.pch;
 				INFOPLIST_FILE = MakerOnly/Info.plist;
@@ -1505,6 +1537,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = /Users/MKL/Documents/Workplace/MKL/MakerOnly/MakerOnly/PrefixHeader.pch;
 				INFOPLIST_FILE = MakerOnly/Info.plist;

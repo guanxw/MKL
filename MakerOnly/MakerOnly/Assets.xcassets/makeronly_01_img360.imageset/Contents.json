@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "makeronly_01_img360.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "icon.png",
       "scale" : "2x"
     },
     {

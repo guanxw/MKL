@@ -7,10 +7,13 @@
 //
 
 #import "MyCenterViewController.h"
+
 #import "CenterHeaderView.h"
 #import "MyProfileViewController.h"
 #import "SetingViewController.h"
-
+#import "FavoriteProductViewController.h"
+#import "FavoriteCompaniesViewController.h"
+#import "BrowsingViewController.h"
 #import "MyOrderViewController.h"
 
 @interface MyCenterViewController ()<UITableViewDelegate, UITableViewDataSource>
@@ -76,20 +79,27 @@
 
 #pragma mark -个人中心姓名下面添加点击手势点击事件
 - (void)productViewClick{
-    JDLog(@"productViewClick");
+    FavoriteProductViewController *fPVC = [[FavoriteProductViewController alloc] initWithNibName:@"FavoriteProductViewController" bundle:nil];
+    fPVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:fPVC animated:YES];
 }
 
 - (void)companiesViewClick{
-    JDLog(@"companiesViewClick");
+    FavoriteCompaniesViewController *fCVC = [[FavoriteCompaniesViewController alloc] initWithNibName:@"FavoriteCompaniesViewController" bundle:nil];
+    fCVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:fCVC animated:YES];
 }
 
 - (void)browsingViewClick{
-    JDLog(@"browsingViewClick");
+    BrowsingViewController *bVC = [[BrowsingViewController alloc] initWithNibName:@"BrowsingViewController" bundle:nil];
+    bVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:bVC animated:YES];
 }
 
 #pragma mark - 设置按钮点击事件
 - (void)setBtClick{
     SetingViewController *sVC = [[SetingViewController alloc] initWithNibName:@"SetingViewController" bundle:nil];
+    sVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:sVC animated:YES];
 }
 

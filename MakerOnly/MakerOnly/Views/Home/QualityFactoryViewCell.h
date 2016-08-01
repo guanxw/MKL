@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface QualityFactoryViewCell : UICollectionViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end

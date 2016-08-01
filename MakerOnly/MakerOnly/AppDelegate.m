@@ -21,6 +21,7 @@
     self.window = [[UIWindow alloc] initWithFrame:SCREEN];
     [self.window makeKeyAndVisible];
     
+    [NSThread sleepForTimeInterval:2];
     
     if (![[NSUserDefaults standardUserDefaults] boolForKey:@"firstLaunch"]) {
         [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"firstLaunch"];
@@ -31,9 +32,6 @@
         LoginViewController *logVC = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
         self.window.rootViewController = mVC;
     }
-    
-    
-    // Override point for customization after application launch.
     return YES;
 }
 
