@@ -2,7 +2,7 @@
 //  CategoryViewCell.m
 //  MakerOnly
 //
-//  Created by Jared on 16/7/29.
+//  Created by Jared on 16/8/3.
 //  Copyright © 2016年 Jared. All rights reserved.
 //
 
@@ -12,8 +12,7 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    self.backgroundColor = [UIColor yellowColor];
-    
+    self.imageView.image = [UIImage imageNamed:@"allCategories"];
 }
 
 @end

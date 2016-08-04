@@ -21,7 +21,7 @@
     self.window = [[UIWindow alloc] initWithFrame:SCREEN];
     [self.window makeKeyAndVisible];
     
-    [NSThread sleepForTimeInterval:2];
+//    [NSThread sleepForTimeInterval:2];
     
     if (![[NSUserDefaults standardUserDefaults] boolForKey:@"firstLaunch"]) {
         [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"firstLaunch"];

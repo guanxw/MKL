@@ -8,7 +8,12 @@
 
 #import "BrowsingViewController.h"
 
-@interface BrowsingViewController ()
+#import "BrowingTableViewCell.h"
+
+
+
+static NSString *identifile = @"browingCell";
+@interface BrowsingViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @end
 
@@ -27,6 +32,29 @@
     [backBtn addTarget:^{
         [self.navigationController popViewControllerAnimated:YES];
     }];
+    
+    [self.tableView registerNib:[UINib nibWithNibName:@"BrowingTableViewCell" bundle:nil] forCellReuseIdentifier:identifile];
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 20;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    BrowingTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifile];
+    if (!cell) {
+        cell = [[BrowingTableViewCell alloc] initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:identifile];
+    }
+    cell.imageViewCell.image = [UIImage imageNamed:@"makeronly_01_img360.jpg"];
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 150;
 }
 
 - (void)didReceiveMemoryWarning {
