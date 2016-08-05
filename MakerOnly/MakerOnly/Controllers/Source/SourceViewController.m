@@ -43,12 +43,12 @@
     
     // 添加ScrollView内容视图
     brandVC = [[BrandViewController alloc] init];
-    brandVC.view.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREENH_HEIGHT - 54);
+    brandVC.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height -100);
     [self addChildViewController:brandVC];
     [self.scrollView addSubview:brandVC.view];
     
     factoryVC = [[FactoryViewController alloc] init];
-    factoryVC.view.frame = CGRectMake(SCREEN_WIDTH, 0, SCREEN_WIDTH, SCREENH_HEIGHT - 54);
+    factoryVC.view.frame = CGRectMake(SCREEN_WIDTH, 0, self.view.frame.size.width, self.view.frame.size.height-100);
     [self addChildViewController:factoryVC];
     [self.scrollView addSubview:factoryVC.view];
     
@@ -63,12 +63,12 @@
 #pragma mark - 按钮点击事件
 - (void)rollClick:(UIButton *)btn{
     for (int i=0; i<2; i++) {
-        UIButton *tempBtn = (UIButton *)[self.view viewWithTag:100 + i];
+//        UIButton *tempBtn = (UIButton *)[self.view viewWithTag:100 + i];
         
     }
     [UIView animateWithDuration:0.2 animations:^{
         self.rollView.frame = CGRectMake(((SCREEN_WIDTH-2)/2+1)*(btn.tag-100), 50, (SCREEN_WIDTH-2)/2, 3);
-        self.scrollView.contentOffset = CGPointMake(SCREEN_WIDTH *(btn.tag - 10), 0);
+        self.scrollView.contentOffset = CGPointMake(SCREEN_WIDTH *(btn.tag - 100), 0);
     }];
 }
 
@@ -85,6 +85,8 @@
         self.rollView.frame = CGRectMake(((SCREEN_WIDTH-2)/2+1)*(currentPoint.x/SCREEN_WIDTH), 50, (SCREEN_WIDTH-2)/2, 3);
     }
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
