@@ -11,7 +11,7 @@
 #import "RecentViewController.h"
 #import "ContactsViewController.h"
 
-@interface MessangerViewController ()
+@interface MessangerViewController ()<UIScrollViewDelegate>
 @property (nonatomic, strong) UISegmentedControl *segmentCtr;
 @property (nonatomic, strong) RecentViewController *recentVC;
 @property (nonatomic, strong) ContactsViewController *contactsVC;
@@ -33,14 +33,15 @@
     self.scrollView.contentSize = CGSizeMake(SCREEN_WIDTH *2, -64);
     self.scrollView.pagingEnabled = YES;
     self.scrollView.bounces = NO;
+    self.scrollView.scrollEnabled = NO;
     
     _recentVC = [[RecentViewController alloc] init];
-    _recentVC.view.frame = CGRectMake(0, 64, SCREEN_WIDTH, SCREENH_HEIGHT);
+    _recentVC.view.frame = CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height);
     [self addChildViewController:_recentVC];
     [self.scrollView addSubview:_recentVC.view];
     
     _contactsVC = [[ContactsViewController alloc] init];
-    _contactsVC.view.frame = CGRectMake(SCREEN_WIDTH, 64, SCREEN_WIDTH, SCREENH_HEIGHT);
+    _contactsVC.view.frame = CGRectMake(SCREEN_WIDTH, 64, self.view.frame.size.width, self.view.frame.size.height);
     [self addChildViewController:_contactsVC];
     [self.scrollView addSubview:_contactsVC.view];
     self.scrollView.scrollsToTop = NO;
@@ -72,6 +73,11 @@
         default:
             break;
     }
+}
+
+#pragma mark - scrollViewDelegate
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    
 }
 
 - (void)didReceiveMemoryWarning {

@@ -14,15 +14,23 @@
                 <rect key="frame" x="0.0" y="0.0" width="178" height="144"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="8mV-EK-jl8">
-                        <rect key="frame" x="0.0" y="0.0" width="178" height="144"/>
+                        <rect key="frame" x="0.0" y="0.0" width="178" height="99"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2BJ-ao-7dZ">
+                        <rect key="frame" x="0.0" y="106" width="178" height="30"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
             <size key="customSize" width="178" height="144"/>
             <connections>
                 <outlet property="imageView" destination="8mV-EK-jl8" id="79a-0U-BJy"/>
+                <outlet property="productName" destination="2BJ-ao-7dZ" id="h3O-u6-cFd"/>
             </connections>
             <point key="canvasLocation" x="361" y="410"/>
         </collectionViewCell>

@@ -12,7 +12,8 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+    self.imageView.image = [UIImage imageNamed:@"makeronly_01_img360.jpg"];
+    self.productName.text = @"江诗丹顿";
 }
 
 @end

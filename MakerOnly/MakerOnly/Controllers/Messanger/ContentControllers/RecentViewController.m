@@ -43,11 +43,16 @@
     static NSString *reuseIdentifier = @"RecentCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:reuseIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:(UITableViewCellStyleSubtitle) reuseIdentifier:reuseIdentifier];
     }
-    cell.textLabel.text = @"Notice";
+    cell.textLabel.text = @"You have a notification";
+    cell.detailTextLabel.text = @"2016-07-28";
     
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 60;
 }
 
 

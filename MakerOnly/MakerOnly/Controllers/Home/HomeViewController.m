@@ -13,6 +13,7 @@
 #import "QualityFactoryViewCell.h"
 #import "NowArrivalsViewCell.h"
 #import "AllCategorysViewController.h"
+#import "InquiryViewController.h"
 
 #import "SDCycleScrollView.h"
 #import "MJRefresh.h"
@@ -167,7 +168,7 @@ static NSString * const NowArrivals = @"NowArrivals";
 //        return 3;
 //    }
     else{
-        return 3;
+        return 10;
     }
 }
 
@@ -208,7 +209,9 @@ static NSString * const NowArrivals = @"NowArrivals";
         }
         
     }else if (indexPath.section == 1 && indexPath.row ==0){
-        NSLog(@"新产品");
+        InquiryViewController *iVC = [[InquiryViewController alloc] initWithNibName:@"InquiryViewController" bundle:nil];
+        iVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:iVC animated:YES];
     }
 }
 /*

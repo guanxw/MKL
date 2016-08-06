@@ -8,7 +8,11 @@
 
 #import "FactoryViewController.h"
 
-@interface FactoryViewController ()
+#import "FactoryCollectionViewCell.h"
+
+static NSString *identifile = @"factoryCell";
+
+@interface FactoryViewController ()<UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
 @end
 
@@ -16,7 +20,34 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor blueColor];
+    self.collectionView.backgroundColor = [UIColor lightGrayColor];
+    [self.collectionView registerNib:[UINib nibWithNibName:@"FactoryCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:identifile];
+}
+
+#pragma mark - <UICollectionView布局>
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+    CGFloat W = SCREEN_WIDTH *0.45;
+    return CGSizeMake(W, W);
+}
+
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
+    return UIEdgeInsetsMake(5, 5, 5, 5);
+}
+
+
+
+#pragma mark - UICollectionViewDelegate & UICollectionViewDataSource
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
+    return 1;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return 20;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    FactoryCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifile forIndexPath:indexPath];
+    return cell;
 }
 
 - (void)didReceiveMemoryWarning {

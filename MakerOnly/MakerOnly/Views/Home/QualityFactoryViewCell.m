@@ -12,8 +12,8 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    self.backgroundColor = [UIColor orangeColor];
     self.imageView.image = [UIImage imageNamed:@"makeronly_01_img360.jpg"];
+    self.productName.text = @"百达翡丽";
 }
 
 @end

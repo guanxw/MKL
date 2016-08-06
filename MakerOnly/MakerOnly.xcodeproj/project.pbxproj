@@ -64,6 +64,8 @@
 		610DA7221D38BD89001A5627 /* SourceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 610DA7201D38BD89001A5627 /* SourceViewController.xib */; };
 		610DA72A1D38D124001A5627 /* CenterHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 610DA7291D38D124001A5627 /* CenterHeaderView.m */; };
 		610DA7301D38D16A001A5627 /* CenterHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 610DA72F1D38D16A001A5627 /* CenterHeaderView.xib */; };
+		612BBD731D546A740083B4EA /* InquiryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 612BBD711D546A740083B4EA /* InquiryViewController.m */; };
+		612BBD741D546A740083B4EA /* InquiryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 612BBD721D546A740083B4EA /* InquiryViewController.xib */; };
 		612EC5A21D4856C900B3605E /* JaredButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 612EC5A11D4856C900B3605E /* JaredButton.m */; };
 		612EC5B51D49969F00B3605E /* RecentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 612EC5B31D49969F00B3605E /* RecentViewController.m */; };
 		612EC5B61D49969F00B3605E /* RecentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 612EC5B41D49969F00B3605E /* RecentViewController.xib */; };
@@ -295,6 +297,9 @@
 		610DA7281D38D124001A5627 /* CenterHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CenterHeaderView.h; sourceTree = "<group>"; };
 		610DA7291D38D124001A5627 /* CenterHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CenterHeaderView.m; sourceTree = "<group>"; };
 		610DA72F1D38D16A001A5627 /* CenterHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CenterHeaderView.xib; sourceTree = "<group>"; };
+		612BBD701D546A740083B4EA /* InquiryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InquiryViewController.h; sourceTree = "<group>"; };
+		612BBD711D546A740083B4EA /* InquiryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InquiryViewController.m; sourceTree = "<group>"; };
+		612BBD721D546A740083B4EA /* InquiryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InquiryViewController.xib; sourceTree = "<group>"; };
 		612EC5A01D4856C900B3605E /* JaredButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JaredButton.h; sourceTree = "<group>"; };
 		612EC5A11D4856C900B3605E /* JaredButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JaredButton.m; sourceTree = "<group>"; };
 		612EC5B21D49969F00B3605E /* RecentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecentViewController.h; sourceTree = "<group>"; };
@@ -813,6 +818,7 @@
 		610DA7091D38BD20001A5627 /* Messanger */ = {
 			isa = PBXGroup;
 			children = (
+				612BBD6F1D546A470083B4EA /* Message */,
 				612EC5A71D488F3F00B3605E /* ContentControllers */,
 				610DA7141D38BD6E001A5627 /* MessangerViewController.h */,
 				610DA7151D38BD6E001A5627 /* MessangerViewController.m */,
@@ -893,6 +899,16 @@
 				61349F821D532FF900A33FCF /* FactoryCollectionViewCell.xib */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		612BBD6F1D546A470083B4EA /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				612BBD701D546A740083B4EA /* InquiryViewController.h */,
+				612BBD711D546A740083B4EA /* InquiryViewController.m */,
+				612BBD721D546A740083B4EA /* InquiryViewController.xib */,
+			);
+			name = Message;
 			sourceTree = "<group>";
 		};
 		612EC59E1D48567700B3605E /* Custom */ = {
@@ -1372,6 +1388,7 @@
 				610DA7221D38BD89001A5627 /* SourceViewController.xib in Resources */,
 				61095F5E1D3CD79500D57381 /* MyProfileViewController.xib in Resources */,
 				61B0A5AB1D3DC3200084CBB8 /* MyProfilePhotoView.xib in Resources */,
+				612BBD741D546A740083B4EA /* InquiryViewController.xib in Resources */,
 				61095F121D3C76D100D57381 /* HomeHeaderView.xib in Resources */,
 				610DA7301D38D16A001A5627 /* CenterHeaderView.xib in Resources */,
 				61B0A5E21D3F574C0084CBB8 /* ForgotPSWViewController.xib in Resources */,
@@ -1469,6 +1486,7 @@
 				61040B8F1D4058CE0010D59D /* UIButton+AFNetworking.m in Sources */,
 				61040B901D4058CE0010D59D /* UIImageView+AFNetworking.m in Sources */,
 				61B0A6121D3F6B5C0084CBB8 /* MJRefreshComponent.m in Sources */,
+				612BBD731D546A740083B4EA /* InquiryViewController.m in Sources */,
 				61040B491D4057090010D59D /* CommonResponseBody.m in Sources */,
 				610DA6B11D38BACC001A5627 /* AppDelegate.m in Sources */,
 				61040B871D4058CE0010D59D /* AFSecurityPolicy.m in Sources */,

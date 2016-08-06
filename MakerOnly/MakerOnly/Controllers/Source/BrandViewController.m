@@ -26,16 +26,16 @@ static NSString *identifile = @"brandCell";
     [self.collectionView registerNib:[UINib nibWithNibName:@"BrandCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:identifile];
 }
 
-#pragma mark - UICollectionView布局
+#pragma mark - <UICollectionView布局>
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
     CGFloat W = SCREEN_WIDTH * 0.3;
     return CGSizeMake(W, W*0.5);
 }
 
-//- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
-//    return UIEdgeInsetsMake(5, 5, 5, 5);
-//}
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
+    return UIEdgeInsetsMake(5, 5, 5, 5);
+}
 
 #pragma mark - UICollectionViewDelegate & UICollectionViewDataSoure
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
