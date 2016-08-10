@@ -66,6 +66,12 @@
 		610DA7301D38D16A001A5627 /* CenterHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 610DA72F1D38D16A001A5627 /* CenterHeaderView.xib */; };
 		612BBD731D546A740083B4EA /* InquiryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 612BBD711D546A740083B4EA /* InquiryViewController.m */; };
 		612BBD741D546A740083B4EA /* InquiryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 612BBD721D546A740083B4EA /* InquiryViewController.xib */; };
+		612BBD7D1D55E0830083B4EA /* TradeShowViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 612BBD7B1D55E0830083B4EA /* TradeShowViewCell.m */; };
+		612BBD7E1D55E0830083B4EA /* TradeShowViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 612BBD7C1D55E0830083B4EA /* TradeShowViewCell.xib */; };
+		612BBD831D581C030083B4EA /* MultCategoriedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 612BBD811D581C030083B4EA /* MultCategoriedViewController.m */; };
+		612BBD841D581C030083B4EA /* MultCategoriedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 612BBD821D581C030083B4EA /* MultCategoriedViewController.xib */; };
+		612BBD891D58622A0083B4EA /* TradeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 612BBD871D58622A0083B4EA /* TradeViewController.m */; };
+		612BBD8A1D58622A0083B4EA /* TradeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 612BBD881D58622A0083B4EA /* TradeViewController.xib */; };
 		612EC5A21D4856C900B3605E /* JaredButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 612EC5A11D4856C900B3605E /* JaredButton.m */; };
 		612EC5B51D49969F00B3605E /* RecentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 612EC5B31D49969F00B3605E /* RecentViewController.m */; };
 		612EC5B61D49969F00B3605E /* RecentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 612EC5B41D49969F00B3605E /* RecentViewController.xib */; };
@@ -300,6 +306,15 @@
 		612BBD701D546A740083B4EA /* InquiryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InquiryViewController.h; sourceTree = "<group>"; };
 		612BBD711D546A740083B4EA /* InquiryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InquiryViewController.m; sourceTree = "<group>"; };
 		612BBD721D546A740083B4EA /* InquiryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InquiryViewController.xib; sourceTree = "<group>"; };
+		612BBD7A1D55E0830083B4EA /* TradeShowViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TradeShowViewCell.h; sourceTree = "<group>"; };
+		612BBD7B1D55E0830083B4EA /* TradeShowViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TradeShowViewCell.m; sourceTree = "<group>"; };
+		612BBD7C1D55E0830083B4EA /* TradeShowViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TradeShowViewCell.xib; sourceTree = "<group>"; };
+		612BBD801D581C030083B4EA /* MultCategoriedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultCategoriedViewController.h; sourceTree = "<group>"; };
+		612BBD811D581C030083B4EA /* MultCategoriedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultCategoriedViewController.m; sourceTree = "<group>"; };
+		612BBD821D581C030083B4EA /* MultCategoriedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultCategoriedViewController.xib; sourceTree = "<group>"; };
+		612BBD861D58622A0083B4EA /* TradeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TradeViewController.h; sourceTree = "<group>"; };
+		612BBD871D58622A0083B4EA /* TradeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TradeViewController.m; sourceTree = "<group>"; };
+		612BBD881D58622A0083B4EA /* TradeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TradeViewController.xib; sourceTree = "<group>"; };
 		612EC5A01D4856C900B3605E /* JaredButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JaredButton.h; sourceTree = "<group>"; };
 		612EC5A11D4856C900B3605E /* JaredButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JaredButton.m; sourceTree = "<group>"; };
 		612EC5B21D49969F00B3605E /* RecentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecentViewController.h; sourceTree = "<group>"; };
@@ -802,6 +817,7 @@
 				612EC6AD1D4B3F4E00B3605E /* HomeViewController.m */,
 				612EC6AE1D4B3F4E00B3605E /* HomeViewController.xib */,
 				61349F6A1D52DA8700A33FCF /* AllCategorys */,
+				612BBD851D5860BD0083B4EA /* TradeShow&Logistics */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -911,6 +927,23 @@
 			name = Message;
 			sourceTree = "<group>";
 		};
+		612BBD7F1D581B1B0083B4EA /* MultCategories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = MultCategories;
+			sourceTree = "<group>";
+		};
+		612BBD851D5860BD0083B4EA /* TradeShow&Logistics */ = {
+			isa = PBXGroup;
+			children = (
+				612BBD861D58622A0083B4EA /* TradeViewController.h */,
+				612BBD871D58622A0083B4EA /* TradeViewController.m */,
+				612BBD881D58622A0083B4EA /* TradeViewController.xib */,
+			);
+			name = "TradeShow&Logistics";
+			sourceTree = "<group>";
+		};
 		612EC59E1D48567700B3605E /* Custom */ = {
 			isa = PBXGroup;
 			children = (
@@ -992,6 +1025,9 @@
 				612EC6EC1D50869E00B3605E /* NowArrivalsViewCell.h */,
 				612EC6ED1D50869E00B3605E /* NowArrivalsViewCell.m */,
 				612EC6EE1D50869E00B3605E /* NowArrivalsViewCell.xib */,
+				612BBD7A1D55E0830083B4EA /* TradeShowViewCell.h */,
+				612BBD7B1D55E0830083B4EA /* TradeShowViewCell.m */,
+				612BBD7C1D55E0830083B4EA /* TradeShowViewCell.xib */,
 			);
 			name = CollectionViewCell;
 			sourceTree = "<group>";
@@ -1009,9 +1045,13 @@
 		61349F6A1D52DA8700A33FCF /* AllCategorys */ = {
 			isa = PBXGroup;
 			children = (
+				612BBD7F1D581B1B0083B4EA /* MultCategories */,
 				61349F6B1D52DAD800A33FCF /* AllCategorysViewController.h */,
 				61349F6C1D52DAD800A33FCF /* AllCategorysViewController.m */,
 				61349F6D1D52DAD800A33FCF /* AllCategorysViewController.xib */,
+				612BBD801D581C030083B4EA /* MultCategoriedViewController.h */,
+				612BBD811D581C030083B4EA /* MultCategoriedViewController.m */,
+				612BBD821D581C030083B4EA /* MultCategoriedViewController.xib */,
 			);
 			name = AllCategorys;
 			sourceTree = "<group>";
@@ -1390,6 +1430,7 @@
 				61B0A5AB1D3DC3200084CBB8 /* MyProfilePhotoView.xib in Resources */,
 				612BBD741D546A740083B4EA /* InquiryViewController.xib in Resources */,
 				61095F121D3C76D100D57381 /* HomeHeaderView.xib in Resources */,
+				612BBD841D581C030083B4EA /* MultCategoriedViewController.xib in Resources */,
 				610DA7301D38D16A001A5627 /* CenterHeaderView.xib in Resources */,
 				61B0A5E21D3F574C0084CBB8 /* ForgotPSWViewController.xib in Resources */,
 				612EC6B01D4B3F4E00B3605E /* HomeViewController.xib in Resources */,
@@ -1402,7 +1443,9 @@
 				612EC6BF1D4B425100B3605E /* QualityFactoryViewCell.xib in Resources */,
 				612EC6F01D50869E00B3605E /* NowArrivalsViewCell.xib in Resources */,
 				612EC5BB1D4996BD00B3605E /* ContactsViewController.xib in Resources */,
+				612BBD8A1D58622A0083B4EA /* TradeViewController.xib in Resources */,
 				610DA6BC1D38BACC001A5627 /* Assets.xcassets in Resources */,
+				612BBD7E1D55E0830083B4EA /* TradeShowViewCell.xib in Resources */,
 				612EC6C41D4EE79A00B3605E /* FavoriteProductViewController.xib in Resources */,
 				61349F751D531D4800A33FCF /* BrandViewController.xib in Resources */,
 				61B0A5B71D3F0A440084CBB8 /* RegisterViewController.xib in Resources */,
@@ -1455,6 +1498,7 @@
 				61B0A6571D3F6B820084CBB8 /* UIImageView+WebCache.m in Sources */,
 				612EC6E31D4F40EE00B3605E /* TAAbstractDotView.m in Sources */,
 				612EC5A21D4856C900B3605E /* JaredButton.m in Sources */,
+				612BBD831D581C030083B4EA /* MultCategoriedViewController.m in Sources */,
 				61B0A64F1D3F6B820084CBB8 /* SDWebImageDownloaderOperation.m in Sources */,
 				61040B5A1D4058AF0010D59D /* base64.m in Sources */,
 				61B0A61F1D3F6B5C0084CBB8 /* MJRefreshConst.m in Sources */,
@@ -1526,6 +1570,7 @@
 				61B0A6151D3F6B5C0084CBB8 /* MJRefreshAutoGifFooter.m in Sources */,
 				61B0A6201D3F6B5C0084CBB8 /* UIScrollView+MJExtension.m in Sources */,
 				61040B931D4058CE0010D59D /* UIWebView+AFNetworking.m in Sources */,
+				612BBD7D1D55E0830083B4EA /* TradeShowViewCell.m in Sources */,
 				61B0A6221D3F6B5C0084CBB8 /* UIView+MJExtension.m in Sources */,
 				61B0A5DB1D3F12A20084CBB8 /* NSArray+MASAdditions.m in Sources */,
 				61040B541D40586D0010D59D /* DeviceUtil.m in Sources */,
@@ -1535,6 +1580,7 @@
 				61349F7E1D532FD200A33FCF /* BrandCollectionViewCell.m in Sources */,
 				612EC6C81D4EE7B000B3605E /* FavoriteCompaniesViewController.m in Sources */,
 				61B0A6181D3F6B5C0084CBB8 /* MJRefreshBackGifFooter.m in Sources */,
+				612BBD891D58622A0083B4EA /* TradeViewController.m in Sources */,
 				612EC6EF1D50869E00B3605E /* NowArrivalsViewCell.m in Sources */,
 				61349F831D532FF900A33FCF /* FactoryCollectionViewCell.m in Sources */,
 				61040B891D4058CE0010D59D /* AFURLRequestSerialization.m in Sources */,

@@ -8,6 +8,8 @@
 
 #import "AllCategorysViewController.h"
 
+#import "MultCategoriedViewController.h"
+
 @interface AllCategorysViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) NSMutableArray *nameArray;
@@ -66,7 +68,8 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    MultCategoriedViewController *mCVC = [[MultCategoriedViewController alloc] initWithNibName:@"MultCategoriedViewController" bundle:nil];
+    [self.navigationController pushViewController:mCVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

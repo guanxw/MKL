@@ -8,6 +8,8 @@
 
 #import "BrandViewController.h"
 
+#import "MJRefresh.h"
+
 #import "BrandCollectionViewCell.h"
 
 
@@ -24,6 +26,14 @@ static NSString *identifile = @"brandCell";
     self.collectionView.backgroundColor = [UIColor lightGrayColor];
     
     [self.collectionView registerNib:[UINib nibWithNibName:@"BrandCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:identifile];
+    
+    // 上拉加载
+    self.collectionView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        [self.collectionView.mj_footer beginRefreshing];
+        JDLog(@"上拉加载");
+        [self.collectionView.mj_footer endRefreshing];
+    }];
+    
 }
 
 #pragma mark - <UICollectionView布局>

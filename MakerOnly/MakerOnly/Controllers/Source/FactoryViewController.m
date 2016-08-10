@@ -10,6 +10,8 @@
 
 #import "FactoryCollectionViewCell.h"
 
+#import "MJRefresh.h"
+
 static NSString *identifile = @"factoryCell";
 
 @interface FactoryViewController ()<UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
@@ -22,6 +24,12 @@ static NSString *identifile = @"factoryCell";
     [super viewDidLoad];
     self.collectionView.backgroundColor = [UIColor lightGrayColor];
     [self.collectionView registerNib:[UINib nibWithNibName:@"FactoryCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:identifile];
+    
+    self.collectionView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        [self.collectionView.mj_footer beginRefreshing];
+        JDLog(@"上拉加载");
+        [self.collectionView.mj_footer endRefreshing];
+    }];
 }
 
 #pragma mark - <UICollectionView布局>

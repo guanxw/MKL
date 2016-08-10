@@ -14,6 +14,8 @@
 #import "NowArrivalsViewCell.h"
 #import "AllCategorysViewController.h"
 #import "InquiryViewController.h"
+#import "TradeShowViewCell.h"
+#import "TradeViewController.h"
 
 #import "SDCycleScrollView.h"
 #import "MJRefresh.h"
@@ -29,6 +31,7 @@ static NSString * const TopSlideCell = @"TopSlideCell";
 static NSString * const CategoryCell = @"CategoryCell";
 static NSString * const QualityFactory = @"QualityFactory";
 static NSString * const NowArrivals = @"NowArrivals";
+static NSString * const TradeShow = @"TradeShowCell";
 
 @implementation HomeViewController
 
@@ -91,6 +94,7 @@ static NSString * const NowArrivals = @"NowArrivals";
     [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([CategoryViewCell class]) bundle:nil] forCellWithReuseIdentifier:CategoryCell];
     [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([QualityFactoryViewCell class]) bundle:nil] forCellWithReuseIdentifier:QualityFactory];
     [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([NowArrivalsViewCell class]) bundle:nil] forCellWithReuseIdentifier:NowArrivals];
+    [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([TradeShowViewCell class]) bundle:nil] forCellWithReuseIdentifier:TradeShow];
     
     [self.collectionView registerClass:[TopSlideView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:TopSlideCell];
     self.collectionView.showsVerticalScrollIndicator = NO;
@@ -101,14 +105,16 @@ static NSString * const NowArrivals = @"NowArrivals";
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.section == 0) {
-//        CGFloat W = SCREEN_WIDTH / (2 );
-//        return CGSizeMake(SCREEN_WIDTH, 160);
         CGFloat W = SCREEN_WIDTH / (4 + 0.8);
         return CGSizeMake(W, W);
-    }else if(indexPath.section == 1)
-    {
+    }
+    else if(indexPath.section == 1){
         return CGSizeMake(SCREEN_WIDTH * 0.3,SCREEN_WIDTH * 0.3);
-    }else{
+    }
+    else if (indexPath.section == 2){
+        return CGSizeMake(SCREEN_WIDTH *0.45, SCREEN_WIDTH *0.45);
+    }
+    else{
         return CGSizeMake(SCREEN_WIDTH * 0.3, SCREEN_WIDTH * 0.3);
     }
 }
@@ -152,7 +158,7 @@ static NSString * const NowArrivals = @"NowArrivals";
 #pragma mark <UICollectionViewDataSource>
 #pragma mark - 返回section的个数
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 3;
+    return 4;
 }
 #pragma mark - 返回每个Section里的item的个数
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
@@ -167,8 +173,11 @@ static NSString * const NowArrivals = @"NowArrivals";
 //        //贸易和物流模块
 //        return 3;
 //    }
+    else if(section ==2){
+        return 2;
+    }
     else{
-        return 10;
+        return 18;
     }
 }
 
@@ -182,6 +191,11 @@ static NSString * const NowArrivals = @"NowArrivals";
     else if(indexPath.section == 1){
         NowArrivalsViewCell *nowArrivalsCell = [collectionView dequeueReusableCellWithReuseIdentifier:NowArrivals forIndexPath:indexPath];
         return nowArrivalsCell;
+    }
+    else if(indexPath.section == 2){
+        TradeShowViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:TradeShow forIndexPath:indexPath];
+        return cell;
+        
     }
     else{
         QualityFactoryViewCell *qualityCell = [collectionView dequeueReusableCellWithReuseIdentifier:QualityFactory forIndexPath:indexPath];
@@ -212,6 +226,10 @@ static NSString * const NowArrivals = @"NowArrivals";
         InquiryViewController *iVC = [[InquiryViewController alloc] initWithNibName:@"InquiryViewController" bundle:nil];
         iVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:iVC animated:YES];
+    }else if (indexPath.section == 2){
+        TradeViewController *tVC = [[TradeViewController alloc] initWithNibName:@"TradeViewController" bundle:nil];
+        tVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:tVC animated:YES];
     }
 }
 /*

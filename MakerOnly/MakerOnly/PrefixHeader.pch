@@ -183,6 +183,8 @@ item.alpha = 0.0; \
 //MySelf
 #define nilOrJSONObjectForKey(JSON_, KEY_) [[JSON_ objectForKey:KEY_] isKindOfClass:[NSNull class]] ? nil : [JSON_ objectForKey:KEY_]
 
+#define HEIGHT_SCALE(height) (SCREENH_HEIGHT>480?((height)/568.0*SCREENH_HEIGHT):(height))
+
 #import "InterfaceUrlDefine.h"
 #import "Masonry.h"
 #import "JaredButton.h"
