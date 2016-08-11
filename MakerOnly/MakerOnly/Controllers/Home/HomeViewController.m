@@ -16,6 +16,7 @@
 #import "InquiryViewController.h"
 #import "TradeShowViewCell.h"
 #import "TradeViewController.h"
+#import "FactoryDetailsViewController.h"
 
 #import "SDCycleScrollView.h"
 #import "MJRefresh.h"
@@ -230,6 +231,10 @@ static NSString * const TradeShow = @"TradeShowCell";
         TradeViewController *tVC = [[TradeViewController alloc] initWithNibName:@"TradeViewController" bundle:nil];
         tVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:tVC animated:YES];
+    }else if (indexPath.section ==3){
+        FactoryDetailsViewController *fDVC = [[FactoryDetailsViewController alloc] initWithNibName:@"FactoryDetailsViewController" bundle:nil];
+        fDVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:fDVC animated:YES];
     }
 }
 /*
