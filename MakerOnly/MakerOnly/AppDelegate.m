@@ -23,6 +23,8 @@
     
 //    [NSThread sleepForTimeInterval:2];
     
+//    
+    
     if (![[NSUserDefaults standardUserDefaults] boolForKey:@"firstLaunch"]) {
         [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"firstLaunch"];
         GuideViewController *gVC = [[GuideViewController alloc] initWithNibName:@"GuideViewController" bundle:nil];
