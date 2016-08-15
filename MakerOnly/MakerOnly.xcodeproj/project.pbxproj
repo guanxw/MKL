@@ -1823,7 +1823,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				GCC_PREFIX_HEADER = /Users/MKL/Documents/Workplace/MKL/MakerOnly/MakerOnly/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/qingongguoji/Desktop/MakerOnly/MakerOnly/MakerOnly/PrefixHeader.pch;
 				INFOPLIST_FILE = MakerOnly/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cn.jared.MakerOnly;
@@ -1837,7 +1837,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				GCC_PREFIX_HEADER = /Users/MKL/Documents/Workplace/MKL/MakerOnly/MakerOnly/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/qingongguoji/Desktop/MakerOnly/MakerOnly/MakerOnly/PrefixHeader.pch;
 				INFOPLIST_FILE = MakerOnly/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cn.jared.MakerOnly;
