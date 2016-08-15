@@ -9,5 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface FactoryContactsViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UILabel *telephoneLabel;
+@property (weak, nonatomic) IBOutlet UILabel *MobilePhoneLabel;
+@property (weak, nonatomic) IBOutlet UILabel *emailLabel;
+@property (weak, nonatomic) IBOutlet UILabel *countryLabel;
+@property (weak, nonatomic) IBOutlet UILabel *provinceLabel;
 
 @end

@@ -23,7 +23,7 @@ static NSString *identifile = @"brandCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.collectionView.backgroundColor = [UIColor lightGrayColor];
+    self.collectionView.backgroundColor = [UIColor whiteColor];
     
     [self.collectionView registerNib:[UINib nibWithNibName:@"BrandCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:identifile];
     

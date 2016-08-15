@@ -29,17 +29,21 @@
     [super viewDidLoad];
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.scrollView.contentSize = self.view.frame.size;
+    self.scrollView.scrollEnabled = NO;
     self.navigationController.navigationBar.translucent = NO;
     [self setUpViews];
 }
 
 - (void)setUpViews{
     
+    self.imageView.image = [UIImage imageNamed:@"icon_factory"];
+    self.factoryNameLabel.text = @"QINGONG International Group Co.,Ltd. ";
+    
     self.contentScrollView.contentSize = CGSizeMake(SCREEN_WIDTH * 4, 0);
     self.contentScrollView.pagingEnabled = YES;
     self.contentScrollView.bounces = NO;
     self.contentScrollView.scrollsToTop = NO;
-//    self.contentScrollView.scrollEnabled = YES;
+    self.contentScrollView.scrollEnabled = NO;
     //添加scrollView内容视图
     factoryHomeVC = [[FactoryHomeViewController alloc] init];
     factoryHomeVC.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
