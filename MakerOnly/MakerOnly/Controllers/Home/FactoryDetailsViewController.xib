@@ -9,6 +9,7 @@
             <connections>
                 <outlet property="contactsBtn" destination="FwZ-mj-moO" id="g6z-yH-sVE"/>
                 <outlet property="contentScrollView" destination="xGo-7Z-Zpt" id="dys-zr-jpQ"/>
+                <outlet property="factoryNameLabel" destination="3Ft-ot-1hk" id="6cT-N8-H63"/>
                 <outlet property="homeBtn" destination="cd9-is-g1M" id="hKV-4O-6VY"/>
                 <outlet property="imageView" destination="5zF-08-1XM" id="cIB-Td-Wcq"/>
                 <outlet property="productBtn" destination="nvN-wQ-Oig" id="bEs-6U-KCG"/>
@@ -35,6 +36,13 @@
                                     <rect key="frame" x="0.0" y="10" width="40" height="40"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3Ft-ot-1hk">
+                                    <rect key="frame" x="48" y="14" width="272" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
                             <color key="backgroundColor" red="0.92549019607843142" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
@@ -46,7 +54,7 @@
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="GV6-E3-xsm">
-                            <rect key="frame" x="171" y="50" width="80" height="30"/>
+                            <rect key="frame" x="160" y="50" width="80" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Profile">
                                 <color key="titleColor" red="1" green="0.50980392159999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -77,7 +85,7 @@
                             </connections>
                         </scrollView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nvN-wQ-Oig">
-                            <rect key="frame" x="83" y="51" width="80" height="30"/>
+                            <rect key="frame" x="80" y="50" width="80" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Products">
                                 <color key="titleColor" red="1" green="0.50980392159999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>

@@ -16,7 +16,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor yellowColor];
+    self.imageView.image = [UIImage imageNamed:@"icon"];
+    self.imageView.layer.cornerRadius = self.imageView.frame.size.width/2;
+    self.imageView.layer.masksToBounds = YES;
+    
+    self.telephoneLabel.text = @"15805316868";
+    self.MobilePhoneLabel.text = @"0531-8686868";
+    self.emailLabel.text = @"makeronly_ios@makeronly.com";
+    self.countryLabel.text = @"China";
+    self.provinceLabel.text = @"ShanDong";
 }
 
 - (void)didReceiveMemoryWarning {

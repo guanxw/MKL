@@ -17,5 +17,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *contactsBtn;
 @property (weak, nonatomic) IBOutlet UIView *rollView;
 @property (weak, nonatomic) IBOutlet UIScrollView *contentScrollView;
+@property (weak, nonatomic) IBOutlet UILabel *factoryNameLabel;
 
 @end
