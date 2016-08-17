@@ -9,15 +9,22 @@
 #import "TradeViewController.h"
 
 #import "HomeHeaderView.h"
+#import "HomeViewController.h"
 
 @interface TradeViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) HomeHeaderView *headerView;
+@property (nonatomic, strong) HomeViewController *homeVC;
 
 @property (nonatomic, strong) UISearchBar *search;
 
 @end
 
 @implementation TradeViewController
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBarHidden = NO;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -31,6 +38,20 @@
      *  设置控制器标题
      */
     self.navigationItem.title = @"TradeShow";
+    _homeVC.search.hidden = YES;
+    
+//    [self setUpViews];
+}
+
+- (void)setUpViews{
+    JaredButton *backBtn = [JaredButton shareButton];
+    self.navigationItem.leftBarButtonItem = [backBtn setBarButtonItemWithBackButton:backBtn imageName:@"back_black"];
+    [backBtn addTarget:^{
+//        HomeViewController *hVC = [[HomeViewController alloc] initWithNibName:@"HomeViewController" bundle:nil];
+//        hVC.search.hidden = NO;
+        [self.navigationController popViewControllerAnimated:YES];
+    }];
+>>>>>>> 93445714759f6a207fb9edaab1d2a7dd6e9d5b83
     
 }
 

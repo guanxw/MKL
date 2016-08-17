@@ -25,7 +25,6 @@
 #import "SearchViewController.h"
 
 @interface HomeViewController ()<UISearchBarDelegate, UICollectionViewDelegateFlowLayout,UICollectionViewDelegate,UICollectionViewDataSource,UIGestureRecognizerDelegate>
-@property (nonatomic, strong) UISearchBar *search;
 @property (nonatomic, strong) SDCycleScrollView *cycleScrollView;
 @property (nonatomic, strong) CategoryViewCell *categoryViewCell;
 
@@ -38,6 +37,11 @@ static NSString * const NowArrivals = @"NowArrivals";
 static NSString * const TradeShow = @"TradeShowCell";
 
 @implementation HomeViewController
+
+//- (void)viewWillAppear:(BOOL)animated{
+//    [super viewWillAppear:animated];
+//    self.navigationController.navigationBarHidden = YES;
+//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -185,7 +189,6 @@ static NSString * const TradeShow = @"TradeShowCell";
     return 10;
 }
 
-
 #pragma mark <UICollectionViewDataSource>
 #pragma mark - 返回section的个数
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
@@ -278,6 +281,7 @@ static NSString * const TradeShow = @"TradeShowCell";
          */
 //        _search.hidden = YES;
         
+//        _search.hidden = YES;
         [self.navigationController pushViewController:tVC animated:YES];
         
     }
