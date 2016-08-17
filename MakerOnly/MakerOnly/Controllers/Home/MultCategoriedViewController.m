@@ -38,11 +38,13 @@
     [self.view addSubview:_tableView];
 }
 
+// 模拟数据加载
 - (void)loadData{
     self.groupArray = [NSMutableArray arrayWithObjects:@"二级类目",@"二级类目",@"二级类目",@"二级类目",@"二级类目",@"二级类目",@"二级类目",@"二级类目",@"二级类目",@"二级类目",@"二级类目",@"二级类目",@"二级类目",@"二级类目", nil];
     self.memberArray = [NSMutableArray arrayWithObjects:@"商品",@"商品",@"商品",@"商品",@"商品",@"商品",@"商品", nil];
 }
 
+#pragma mark - UITableViewDelegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return self.groupArray.count;
 }
@@ -111,7 +113,7 @@
     
     return header;
 }
-
+#pragma mark - 点击头部展开伸缩
 - (void)singleTap:(UITapGestureRecognizer *)recognizer{
     NSInteger didSection = recognizer.view.tag;
     
