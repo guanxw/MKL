@@ -9,13 +9,20 @@
 #import "TradeViewController.h"
 
 #import "HomeHeaderView.h"
+#import "HomeViewController.h"
 
 @interface TradeViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) HomeHeaderView *headerView;
+@property (nonatomic, strong) HomeViewController *homeVC;
 
 @end
 
 @implementation TradeViewController
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBarHidden = NO;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -23,6 +30,19 @@
     [self.headerView initViews];
     self.tableView.tableHeaderView = self.headerView;
 //    self.tableView.tableHeaderView.frame = CGRectMake(0, 0, SCREENH_HEIGHT, 120);
+    _homeVC.search.hidden = YES;
+    
+//    [self setUpViews];
+}
+
+- (void)setUpViews{
+    JaredButton *backBtn = [JaredButton shareButton];
+    self.navigationItem.leftBarButtonItem = [backBtn setBarButtonItemWithBackButton:backBtn imageName:@"back_black"];
+    [backBtn addTarget:^{
+//        HomeViewController *hVC = [[HomeViewController alloc] initWithNibName:@"HomeViewController" bundle:nil];
+//        hVC.search.hidden = NO;
+        [self.navigationController popViewControllerAnimated:YES];
+    }];
     
 }
 

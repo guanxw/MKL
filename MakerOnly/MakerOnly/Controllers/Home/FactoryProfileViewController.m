@@ -16,7 +16,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor blueColor];
+    self.imageView.image = [UIImage imageNamed:@"icon"];
+    self.brandNameLabel.text = @"SINOTRUK";
+    self.annualLabel.text = @"US$18000000.00";
+    self.dataLabel.text = @"2001-01-10";
+    self.numberLabel.text = @"2000 persons";
+    self.mainPrductsLabel.text = @"Dump truck, Tractor truck";
 }
 
 - (void)didReceiveMemoryWarning {

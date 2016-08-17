@@ -10,4 +10,5 @@
 
 @interface HomeViewController : UICollectionViewController
 
+@property (nonatomic, strong) UISearchBar *search;
 @end
