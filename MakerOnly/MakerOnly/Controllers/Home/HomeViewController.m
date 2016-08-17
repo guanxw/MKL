@@ -16,10 +16,13 @@
 #import "InquiryViewController.h"
 #import "TradeShowViewCell.h"
 #import "TradeViewController.h"
-#import "FactoryDetailsViewController.h"
 
 #import "SDCycleScrollView.h"
 #import "MJRefresh.h"
+
+#import "BaseNavigationViewController.h"
+
+#import "SearchViewController.h"
 
 @interface HomeViewController ()<UISearchBarDelegate, UICollectionViewDelegateFlowLayout,UICollectionViewDelegate,UICollectionViewDataSource,UIGestureRecognizerDelegate>
 @property (nonatomic, strong) UISearchBar *search;
@@ -38,6 +41,20 @@ static NSString * const TradeShow = @"TradeShowCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    /**
+     * 创建搜索按钮
+     */
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(tagClick)];
+    self.navigationItem.title = @"Home Page";
+    
+    /**
+     *  修改搜索按钮颜色
+     */
+    self.navigationController.navigationBar.tintColor = [UIColor blackColor];
+
+    
     self.collectionView.backgroundColor = [UIColor whiteColor];
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(keyBoardHide)];
@@ -47,7 +64,7 @@ static NSString * const TradeShow = @"TradeShowCell";
     [self registerCell];
     
     //初始化搜索框
-    [self initSearchView];
+//    [self initSearchView];
     
     //轮播图加载图片
     [self addSDcycleView];
@@ -67,6 +84,16 @@ static NSString * const TradeShow = @"TradeShowCell";
 //        self.collectionView.mj_footer.hidden = YES;
     }];
 }
+/**
+ *  添加搜索跳转事件
+ */
+-(void)tagClick{
+    
+    SearchViewController *SVC = [[SearchViewController alloc]init];
+    
+    [self.navigationController pushViewController:SVC animated:YES];
+
+}
 
 #pragma mark -UICollectionViewFlowLayout
 - (instancetype)init{
@@ -75,20 +102,23 @@ static NSString * const TradeShow = @"TradeShowCell";
 }
 
 #pragma mark - 初始化搜索框
-- (void)initSearchView{
-    CGRect navRact = self.navigationController.view.bounds;
-    _search = [[UISearchBar alloc] init];
-    _search.frame = CGRectMake(CGRectGetMinX(navRact),
-                               CGRectGetMinY(navRact)+20,
-                               navRact.size.width,
-                               44);
-    _search.delegate = self;
-    [self.navigationController.view addSubview:_search];
-    // 设置搜索框后面的背景
-    [_search setBackgroundImage:[UIImage new]];
-    self.search.keyboardType = UIKeyboardTypeASCIICapable;
-    _search.placeholder = @"搜索商品";
-}
+//- (void)initSearchView{
+////    CGRect navRact = self.navigationController.view.bounds;
+////    _search = [[UISearchBar alloc] init];
+////    _search.frame = CGRectMake(CGRectGetMinX(navRact),
+////                               CGRectGetMinY(navRact)+20,
+////                               navRact.size.width,
+////                               44);
+////    _search.delegate = self;
+//////    [self.navigationController.view addSubview:_search];
+////    // 设置搜索框后面的背景
+////    [_search setBackgroundImage:[UIImage new]];
+////    self.search.keyboardType = UIKeyboardTypeASCIICapable;
+////    _search.placeholder = @"搜索商品";
+//    
+//    
+//    
+//}
 
 #pragma mark - 注册Cell
 - (void)registerCell{
@@ -215,10 +245,17 @@ static NSString * const TradeShow = @"TradeShowCell";
 
 #pragma mark - 点击section和cell
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
     if (indexPath.section == 0) {
         if (indexPath.row == 0) {
             AllCategorysViewController *aCVC = [[AllCategorysViewController alloc] initWithNibName:@"AllCategorysViewController" bundle:nil];
             aCVC.hidesBottomBarWhenPushed = YES;
+            /**
+             * 隐藏搜索栏
+             */
+            
+//            _search.hidden = NO;
+            
             [aCVC.navigationItem.titleView removeFromSuperview];
             [self.navigationController pushViewController:aCVC animated:YES];
         }
@@ -226,15 +263,23 @@ static NSString * const TradeShow = @"TradeShowCell";
     }else if (indexPath.section == 1 && indexPath.row ==0){
         InquiryViewController *iVC = [[InquiryViewController alloc] initWithNibName:@"InquiryViewController" bundle:nil];
         iVC.hidesBottomBarWhenPushed = YES;
+        /**
+         * 隐藏搜索栏
+         */
+//        _search.hidden = NO;
+
         [self.navigationController pushViewController:iVC animated:YES];
     }else if (indexPath.section == 2){
         TradeViewController *tVC = [[TradeViewController alloc] initWithNibName:@"TradeViewController" bundle:nil];
         tVC.hidesBottomBarWhenPushed = YES;
+        
+        /**
+         * 隐藏搜索栏
+         */
+//        _search.hidden = YES;
+        
         [self.navigationController pushViewController:tVC animated:YES];
-    }else if (indexPath.section ==3){
-        FactoryDetailsViewController *fDVC = [[FactoryDetailsViewController alloc] initWithNibName:@"FactoryDetailsViewController" bundle:nil];
-        fDVC.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:fDVC animated:YES];
+        
     }
 }
 /*
@@ -266,6 +311,7 @@ static NSString * const TradeShow = @"TradeShowCell";
 }
 
 #pragma mark - 内部方法(添加banner轮播图)
+
 - (void)addSDcycleView{
     //计算尺寸
     CGFloat cycleX = 0;
@@ -275,6 +321,8 @@ static NSString * const TradeShow = @"TradeShowCell";
     CGRect rect = CGRectMake(cycleX, cycleY, cycleW, cycleH);
     
     NSArray *imageArray = @[@"makeronly_01_banner.jpg",@"makeronly_01_banner.jpg",@"makeronly_01_banner.jpg"];
+    
+    
     //轮播图banner加载图片
     SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:rect imageNamesGroup:imageArray];
     self.cycleScrollView = cycleScrollView;

@@ -22,7 +22,7 @@ static NSString *identifile = @"factoryCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.collectionView.backgroundColor = [UIColor whiteColor];
+    self.collectionView.backgroundColor = [UIColor lightGrayColor];
     [self.collectionView registerNib:[UINib nibWithNibName:@"FactoryCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:identifile];
     
     self.collectionView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{

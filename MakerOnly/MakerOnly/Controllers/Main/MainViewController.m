@@ -13,6 +13,7 @@
 #import "MyCenterViewController.h"
 #import "SourceViewController.h"
 
+#import "BaseNavigationViewController.h"
 
 @interface MainViewController ()
 
@@ -49,19 +50,19 @@
     [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor darkGrayColor],NSForegroundColorAttributeName, nil] forState:UIControlStateHighlighted];
     
     HomeViewController *hVC = [[HomeViewController alloc] initWithNibName:@"HomeViewController" bundle:nil];
-    self.homeNav = [[UINavigationController alloc] initWithRootViewController:hVC];
+    self.homeNav = [[BaseNavigationViewController alloc] initWithRootViewController:hVC];
     self.homeNav.tabBarItem = [self itemWithTitle:@"Home" image:[UIImage imageNamed:@"makeronly_home_n"] selectedImage:[UIImage imageNamed:@"makeronly_home_p"]];
     
     MessangerViewController *mVC = [[MessangerViewController alloc] initWithNibName:@"MessangerViewController" bundle:nil];
-    self.messangerNav = [[UINavigationController alloc] initWithRootViewController:mVC];
+    self.messangerNav = [[BaseNavigationViewController alloc] initWithRootViewController:mVC];
     self.messangerNav.tabBarItem = [self itemWithTitle:@"Messanger" image:[UIImage imageNamed:@"makeronly_messenger_n"] selectedImage:[UIImage imageNamed:@"makeronly_messenger_p"]];
     
     MyCenterViewController *mcVC = [[MyCenterViewController alloc] initWithNibName:@"MyCenterViewController" bundle:nil];
-    self.myCenterNav = [[UINavigationController alloc] initWithRootViewController:mcVC];
+    self.myCenterNav = [[BaseNavigationViewController alloc] initWithRootViewController:mcVC];
     self.myCenterNav.tabBarItem = [self itemWithTitle:@"Center" image:[UIImage imageNamed:@"makeronly_mymkl_n"] selectedImage:[UIImage imageNamed:@"makeronly_mymkl_p"]];
     
     SourceViewController *sVC = [[SourceViewController alloc] initWithNibName:@"SourceViewController" bundle:nil];
-    self.sourceNav = [[UINavigationController alloc] initWithRootViewController:sVC];
+    self.sourceNav = [[BaseNavigationViewController alloc] initWithRootViewController:sVC];
     self.sourceNav.tabBarItem = [self itemWithTitle:@"Source" image:[UIImage imageNamed:@"makeronly_source_n"] selectedImage:[UIImage imageNamed:@"makeronly_source_p"]];
     
     self.viewControllers = [NSArray arrayWithObjects:self.homeNav,self.sourceNav,self.messangerNav,self.myCenterNav, nil];

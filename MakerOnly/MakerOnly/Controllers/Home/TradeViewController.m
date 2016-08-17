@@ -13,6 +13,8 @@
 @interface TradeViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) HomeHeaderView *headerView;
 
+@property (nonatomic, strong) UISearchBar *search;
+
 @end
 
 @implementation TradeViewController
@@ -23,6 +25,12 @@
     [self.headerView initViews];
     self.tableView.tableHeaderView = self.headerView;
 //    self.tableView.tableHeaderView.frame = CGRectMake(0, 0, SCREENH_HEIGHT, 120);
+
+#pragma mark --- ECEdit0
+    /**
+     *  设置控制器标题
+     */
+    self.navigationItem.title = @"TradeShow";
     
 }
 

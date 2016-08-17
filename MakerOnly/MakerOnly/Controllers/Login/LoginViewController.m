@@ -5,13 +5,7 @@
 //  Created by Jared on 16/7/20.
 //  Copyright © 2016年 Jared. All rights reserved.
 //
-/**
- *  <#Description#>
- *
- *  @param void <#void description#>
- *
- *  @return <#return value description#>
- */
+
 #import "LoginViewController.h"
 
 #import "RegisterViewController.h"
